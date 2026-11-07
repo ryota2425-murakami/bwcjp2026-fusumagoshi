@@ -7,7 +7,7 @@
 本来、誰にでも届くべきものを。(高齢化)
 
 ## デモ動画
-(YouTube などの公開リンクを入れる)
+https://youtu.be/SIDHWUTsMHE
 
 ## GitHub
 (公開リポジトリのリンクを入れる)

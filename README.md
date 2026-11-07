@@ -38,10 +38,9 @@ Built with Claude: Japan 2026 / テーマ「本来、誰にでも届くべきも
 
 ## デモ
 
-> 3 分のデモ動画: **(提出時に YouTube のリンクを入れる)**
-<!-- YouTube に上げたら、下の画像を [![…](docs/images/video_thumb.jpg)](https://youtu.be/…) の形でリンクにする -->
+3 分のデモ動画: **https://youtu.be/SIDHWUTsMHE**
 
-![3 分のデモ動画(最後の場面)](docs/images/video_thumb.jpg)
+[![3 分のデモ動画](docs/images/video_thumb.jpg)](https://youtu.be/SIDHWUTsMHE)
 
 ### 画面の写真
 
@@ -164,13 +163,6 @@ Built with Claude: Japan 2026 / テーマ「本来、誰にでも届くべきも
 | Managed Agents | 便り係。記憶ストア・スキル・18:00 の定期実行・Outcomes の採点役(最大 3 回) | [`app/managed/`](app/managed/agents/fusuma-family) |
 | Claude Code | 設計・実装・監査・動画づくり。フックで原則に反する書き込みを止め、監査と検証はサブエージェントに分けた。作りながら直したことは [iterations.md](docs/records/iterations.md) | [`.claude/`](.claude)、[development.md](docs/tech/development.md) |
 
-## 限界と前提
-
-- 受話器で話す前提です。スピーカーホンだと相手の声も祖母の発話として拾います(未検証)。
-- デモの音声は合成で、祖母役は 1 人、台本は架空の 15 通話です。
-- 呼出音・受話器の音も合成で、実機の電話機・部屋のマイクでの検出は未検証です。
-- 実際の家にはまだ置いていません。
-
 ## 動かし方
 
 macOS(Apple Silicon)。
@@ -210,19 +202,7 @@ video/           デモ動画の作り方(素材は同梱しない)
 
 ## これから
 
-- 祖母の家に置き、家族で便りを受け取ってみる。
-- 実機の電話機と部屋のマイクで確かめる。
-- LINE などへの便りの送達。消費生活センター・地域包括支援センターとのつなぎ方を探る。
-
-## クレジット
-
-- モデル: Claude(Anthropic)、whisper large-v3-turbo、YAMNet、Silero VAD、Qwen3-TTS、Praat
-- 行灯の声: AivisSpeech Engine と「まお」(Aivis Project / ACML 1.0)
-- 知識カードの出典: 消費者庁・国民生活センター・警察庁・全国銀行協会
-- フォント: Noto Sans JP(画面)、Shippori Mincho B1(先頭の写真)ほか Google Fonts(SIL Open Font License)
-- デモ動画の素材: Pexels・Getty Images・Mixkit。P01 の相手の声は警視庁 YouTube「スマホ防犯教室 架空料金請求詐欺編」の再現ドラマ。どれもリポジトリには含みません([CREDITS](video/assets/CREDITS.md))
-- キャラ「みずち」は、この作品のために描いたものです(Anthropic の公式素材ではありません)
-- 先頭の写真は実機です。登場人物・会社名・住所・電話番号はすべて架空です
+- 次の帰省のタイミングで祖母の家に置き、家族で便りを受け取ってみます!(使ってくれるといいな)
 
 ## ライセンス
 
