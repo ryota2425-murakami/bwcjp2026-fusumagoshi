@@ -1,0 +1,23 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #e-band { position: absolute; inset: 0; background: #1d4541; clip-path: inset(0 100% 0 0); }
+    #e-name { position: absolute; left: 160px; top: 388px; font-family: "Noto Sans JP", sans-serif; font-weight: 700; font-size: 112px;
+      letter-spacing: .08em; line-height: 1.2; color: #eef2ef; clip-path: inset(0 100% 0 0); white-space: nowrap; }
+    #e-line { position: absolute; left: 164px; top: 548px; font-family: "Noto Sans JP", sans-serif; font-weight: 400; font-size: 40px;
+      letter-spacing: .04em; line-height: 1.4; color: #c4d4d0; clip-path: inset(0 100% 0 0); white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="ending" data-width="1920" data-height="1080">
+    <div id="e-band"></div>
+    <div id="e-name">ふすまごし</div>
+    <div id="e-line">離れていても、ふすま一枚向こうに。</div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#e-band", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.45, ease: "power3.out" }, 0);
+    tl.fromTo("#e-name", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "power2.out" }, 0.25);
+    tl.fromTo("#e-line", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.35, ease: "power2.out" }, 0.34);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["ending"] = tl;
+  </script>
+</template>

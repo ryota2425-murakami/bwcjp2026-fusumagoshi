@@ -1,0 +1,35 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "app/web/index.html"
+        ],
+        "createdAt": "2026-11-07T16:41:56.334Z",
+        "reason": "Claude: detector could not resolve the server path /static/css/*.css and measured browser defaults (16px); rendered sizes are h1 34px, body 16-19px, spoken line 26-38px (checked in 1920x1080 captures)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "app/web/family.html"
+        ],
+        "createdAt": "2026-11-07T16:41:56.353Z",
+        "reason": "Claude: detector could not resolve the server path /static/css/*.css and measured browser defaults (16px); rendered sizes are h1 34px, body 16-19px, spoken line 26-38px (checked in 1920x1080 captures)"
+      },
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "video/overview20/compositions/kitchen.html"
+        ],
+        "createdAt": "2026-11-07T17:13:30.017Z",
+        "reason": "Claude: the plates start at opacity 0 in CSS and GSAP fades them to 1 on the video timeline (ring 1.0s, council 9.6s, lantern 13.15s); frames pulled from the rendered MP4 show each plate on screen"
+      }
+    ]
+  }
+}

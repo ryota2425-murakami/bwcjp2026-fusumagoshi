@@ -1,0 +1,111 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: #f1f3f4; }
+    #k-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    .k-plate { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    #k-start, #k-council, #k-speak { opacity: 0; }
+    #k-rows { clip-path: inset(56px 792px 1024px 0px); }
+    .k-cover { position: absolute; top: 628px; width: 210px; height: 257px; background: #f1f3f4; transform-origin: 50% 100%; }
+    .k-frame { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    .k-frame rect { fill: none; stroke: #14181b; stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; }
+    /* 行灯の画面: どの画面の上でも、みずちをその時刻の状態で描く */
+    #k-screen { position: absolute; left: 1252px; top: 94px; width: 284px; height: 160px; border-radius: 4px; overflow: hidden; background: #F4F1EA; }
+    #k-floor { position: absolute; left: 66px; top: 118px; width: 152px; height: 21px; background: radial-gradient(closest-side, rgba(43, 33, 28, .10), rgba(43, 33, 28, 0)); }
+    #k-mz { position: absolute; left: 42px; top: -5px; width: 200px; height: 141px; }
+    #k-mz svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  </style>
+  <div id="root" data-composition-id="kitchen" data-width="1920" data-height="1080" data-layout-allow-overflow>
+    <div id="k-cam">
+      <!-- 本物の画面(架空の通話 S05 を流し直して撮った 2 倍の静止画) -->
+      <img id="k-idle" class="k-plate" src="assets/plates/p_idle.png" alt="見守り中の台所の画面" />
+      <img id="k-start" class="k-plate" src="assets/plates/p_start.png" alt="電話が鳴った台所の画面" />
+      <img id="k-rows" class="k-plate" src="assets/plates/p_rows.png" alt="祖母の発話が記帳された通話明細" />
+      <div id="k-council" class="k-plate">
+        <img class="k-plate" src="assets/plates/p_council.png" alt="3 つの役の判定" />
+        <div id="k-cover1" class="k-cover" style="left: 1245px"></div>
+        <div id="k-cover2" class="k-cover" style="left: 1457px"></div>
+        <div id="k-cover3" class="k-cover" style="left: 1669px"></div>
+      </div>
+      <img id="k-speak" class="k-plate" src="assets/plates/p_speak.png" alt="行灯が問いかける画面" />
+      <div id="k-screen" data-layout-ignore><div id="k-floor"></div><div id="k-mz"></div></div>
+      <!-- 注目の枠: 間の列 / 行灯の画面 -->
+      <svg id="k-frame-ma" class="k-frame" viewBox="0 0 1920 1080"><rect x="238" y="204" width="282" height="642" rx="4" pathLength="1" /></svg>
+      <svg id="k-frame-dev" class="k-frame" viewBox="0 0 1920 1080"><rect x="1236" y="78" width="316" height="222" rx="14" pathLength="1" /></svg>
+    </div>
+  </div>
+  <script>
+    // ---- 行灯の画面のみずち: Pi と同じ rig.js を、この動画の時刻だけから描く ----
+    function mouthEnv(text, dur, hz) {
+      const PAUSE = { "、": .18, "。": .3, "？": .3 };
+      const units = [];
+      for (const ch of text) {
+        if (PAUSE[ch]) units.push(["p", PAUSE[ch]]);
+        else if (/[ぁぃぅぇぉゃゅょっ]/.test(ch)) continue;
+        else if (/[ぁ-んァ-ヶー]/.test(ch)) units.push(["m", 1]);
+        else if (/[一-鿿]/.test(ch)) units.push(["m", 1.6]);
+      }
+      const n = Math.round(dur * hz), env = new Array(n).fill(0);
+      const pt = units.filter((u) => u[0] === "p").reduce((a, u) => a + u[1], 0);
+      const mt = units.filter((u) => u[0] === "m").reduce((a, u) => a + u[1], 0);
+      const perM = (dur - pt) / mt;
+      let t = 0;
+      units.forEach(([k, v], i) => {
+        const len = k === "p" ? v : v * perM;
+        if (k === "m") for (let j = Math.floor(t * hz); j < Math.min(n, Math.ceil((t + len) * hz)); j++)
+          env[j] = Math.max(env[j], Math.sin(Math.PI * Math.min(1, Math.max(0, (j / hz - t) / len))) * (.62 + .3 * ((i * 7) % 5) / 4));
+        t += len;
+      });
+      return env;
+    }
+    const TRACK = {
+      // 見守り → 電話が鳴る(1.0) → 判定を待つ(9.6) → 見守り → 電話のあとに話す(12.85) → 返事を聞く
+      moods: [[0, "watch"], [1.0, "call"], [9.6, "think"], [12.3, "watch"], [12.85, "after"], [16.25, "listen"]],
+      speak: [{ t0: 13.2, hz: 20, env: mouthEnv("そういえば、さっきの電話、なんだったの？", 2.96, 20) }],
+    };
+    const SHIFT = 30;   // 瞬きなどの乱数を、ちょうど良い所から始める
+    const kRig = LanternRig.create(document.getElementById("k-mz"), { seed: 7 });
+    const C_DAY = [244, 241, 234], C_MID = [91, 74, 62], C_NIGHT = [20, 17, 14];
+    function kDraw(t) {
+      const s = HFDrive.stateAt(t, TRACK);
+      s.since += SHIFT; s.sus = 0; s.ask = 0;
+      kRig.render(t + SHIFT, s);
+      const g = LanternRig.glowOf(t + SHIFT, s);
+      let k = Math.max(0, Math.min(1, (g - .03) / .4)); k = k * k * (3 - 2 * k);
+      const c = C_DAY.map((d, i) => Math.round(k < .5 ? C_NIGHT[i] + (C_MID[i] - C_NIGHT[i]) * k * 2 : C_MID[i] + (d - C_MID[i]) * (k - .5) * 2));
+      const hi = c.map((v, i) => Math.min(255, v + Math.round(7 * k * [1, .85, .6][i])));
+      document.getElementById("k-screen").style.background = `radial-gradient(ellipse 75% 70% at 50% 46%, rgb(${hi}) 0%, rgb(${c}) 72%)`;
+      document.getElementById("k-floor").style.opacity = (.25 + .75 * k).toFixed(3);
+      kRig.el.style.opacity = (.35 + .65 * Math.min(1, g / .5)).toFixed(3);
+    }
+    window.addEventListener("hf-seek", (e) => kDraw(e.detail.time));
+    kDraw(0);
+
+    const tl = gsap.timeline({ paused: true });
+    // 1. 全体 → 電話が鳴る(画面が切り替わり、行灯の画面のみずちが沈む)
+    tl.fromTo("#k-cam", { x: 0, y: 0, scale: 1 }, { x: -115, y: 0, scale: 1.12, duration: 4.2, ease: "sine.inOut" }, 0.1);
+    tl.set("#k-start", { opacity: 1 }, 1.0);
+    // 2. 明細に寄り、祖母の発話を 1 行ずつ記帳する
+    tl.to("#k-cam", { x: 0, y: -194, scale: 1.4, duration: 0.85, ease: "power3.inOut" }, 4.4);
+    const rowBottoms = [264, 295, 326, 357, 388, 419, 445, 476, 503, 534, 565, 596, 627, 658, 689, 720, 751, 782, 813, 840];
+    tl.set("#k-rows", { clipPath: "inset(56px 792px 847px 0px)" }, 4.9);
+    rowBottoms.forEach((b, i) => tl.set("#k-rows", { clipPath: `inset(56px 792px ${1080 - b}px 0px)` }, 4.9 + 0.175 * (i + 1)));
+    tl.set("#k-rows", { clipPath: "inset(56px 792px 48px 0px)" }, 8.55);
+    tl.fromTo("#k-frame-ma rect", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 6.0);
+    tl.to("#k-frame-ma", { opacity: 0, duration: 0.3, ease: "sine.in" }, 7.5);
+    // 全体に引く: 通話中、行灯の画面は沈んでいる
+    tl.to("#k-cam", { x: 0, y: 0, scale: 1, duration: 0.9, ease: "power3.inOut" }, 7.8);
+    tl.set("#k-rows", { clipPath: "inset(0px 0px 0px 0px)" }, 8.6);   // 聞き役の判定が右の欄に出る
+    tl.fromTo("#k-frame-dev rect", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 8.7);
+    tl.to("#k-frame-dev", { opacity: 0, duration: 0.3, ease: "sine.in" }, 9.5);
+    // 3. 3 つの役(別々に考える)
+    tl.fromTo("#k-council", { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "sine.inOut" }, 9.6);
+    tl.to("#k-cam", { x: -2592, y: -1152, scale: 2.35, duration: 0.9, ease: "power3.inOut" }, 9.6);
+    ["#k-cover1", "#k-cover2", "#k-cover3"].forEach((id, i) =>
+      tl.fromTo(id, { scaleY: 1 }, { scaleY: 0, duration: 0.45, ease: "power2.out" }, 10.2 + 0.6 * i));
+    // 4. 電話のあと、行灯の画面のみずちが話しかける
+    tl.to("#k-cam", { x: -2592, y: -132, scale: 2.35, duration: 0.9, ease: "power3.inOut" }, 12.8);
+    tl.fromTo("#k-speak", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "sine.inOut" }, 13.0);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["kitchen"] = tl;
+  </script>
+</template>

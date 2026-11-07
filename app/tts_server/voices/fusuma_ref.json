@@ -1,0 +1,7 @@
+{
+  "persona": "fusuma",
+  "instruct": "落ち着いた40代の日本人女性の声。やわらかく、ゆっくり、家族に話しかけるような温かい口調。押しつけがましくない。",
+  "ref_text": "おかえりなさい。今日はいいお天気だったね。お茶でも淹れようか。",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit",
+  "seed": 2010
+}

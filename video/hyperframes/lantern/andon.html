@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+      #root { position: relative; width: 100%; height: 100%; }
+      /* s04 の図(行灯・マイク・Mac・電話)の左に立つ。rig の viewBox は 430×304(床は上から 86%)。足もとが y≈700、体の幅 ≈220px */
+      #andon-char { position: absolute; left: -34px; top: 444px; width: 420px; height: 297px; }
+      #andon-char-in { position: absolute; inset: 0; }
+      #andon-char-in svg { width: 100%; height: 100%; display: block; overflow: visible; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="andon" data-start="0" data-duration="10.65" data-width="1920" data-height="1080">
+      <div id="andon-char" class="clip" data-start="1.35" data-duration="9.3" data-track-index="1">
+        <div id="andon-char-in"></div>
+      </div>
+    </div>
+    <script src="assets/rig.js"></script>
+    <script src="assets/drive.js"></script>
+    <script src="assets/tracks.js"></script>
+    <script>
+      // s04 の時刻(場面の頭から)は build_timeline_v2.py が assets/tracks.js に書き出す(ナレーションの長さで決まる)
+      // lamp 灯る / mic マイク / phone 電話 / only「聞くのは祖母の声だけ」/ off「通話中は光らない・話さない」
+      const T = (window.TRACKS && TRACKS.s04 && TRACKS.s04.T) || { lamp: 1.9, mic: 3.0, phone: 4.6, only: 6.4, off: 7.6 };
+      const B2 = (window.TRACKS && TRACKS.s04 && TRACKS.s04.b02) || [4.9, 9.1];   // 「電話の線にはつながず、部屋のマイクで、祖母の声だけを聞きます」
+      const LISTEN = Math.max(T.only - 0.1, B2[0] + 1.4);                      // 「部屋のマイクで」のあたりから聞く顔
+      const CALL = T.off + 0.75;                                                // 「通話中は、光らない・話さない」が出るところで目を閉じる
+      const TRACK = {
+        // 聞く → 目を閉じる のあいだに、いちど手を下ろす(耳の手が顔の前を横切らないように)
+        moods: [[0, "watch"], [T.lamp + 0.15, "after"], [T.lamp + 1.3, "watch"], [LISTEN, "listen"], [CALL - 0.45, "watch"], [CALL, "call"]],
+        touch: [],
+        gaze: [[0, 0], [T.mic + 0.2, 0], [T.mic + 0.6, 1.0], [T.phone + 0.1, 1.0], [T.phone + 0.45, 1.0], [LISTEN - 0.2, 0.95], [LISTEN + 0.3, 0.7], [CALL - 0.5, 0.7], [CALL, 0]],
+        nod: [LISTEN + 0.9, LISTEN + 1.7],
+        speak: [],
+      };
+      const rig = LanternRig.create(document.getElementById("andon-char-in"), { seed: 4, glow: 0.45 });   // 和紙の上では自分の光を弱める
+      function renderAt(t) { rig.render(t, HFDrive.stateAt(t, TRACK)); }
+      window.addEventListener("hf-seek", (e) => renderAt(e.detail.time));
+      renderAt(0);
+      const tl = gsap.timeline({ paused: true });
+      tl.fromTo("#andon-char-in", { scale: 0.45, opacity: 0, transformOrigin: "50% 86%" }, { scale: 1, opacity: 1, duration: 0.38, ease: "back.out(2.2)" }, T.lamp + 0.1);
+      tl.to({}, { duration: 0.01 }, 10.63);
+      window.__timelines["andon"] = tl;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+name: fusuma-memory
+description: |
+  ふすまごしの記憶(祖母の家の端末が書き込む)。
+  karte/<日付>/<通話ID>.md に通話カルテ(1 通話 1 ファイル。祖母の発話に基づく要約だけ。音声や通話の全文は入っていない)。
+  life/<日付>.md に暮らしのメモ(祖母が話したこと。secret: true は家族に伝えない)。
+  family/context.md に家族の文脈と伝える範囲のルール。
+  letters/<日付>.md にこれまでの便り。

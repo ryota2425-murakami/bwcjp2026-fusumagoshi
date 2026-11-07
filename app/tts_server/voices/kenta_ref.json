@@ -1,0 +1,7 @@
+{
+  "persona": "kenta",
+  "instruct": "30代の日本人男性の声。明るく優しい孫の声。少し照れくさそうに、祖母に話しかける。",
+  "ref_text": "もしもし、ばあちゃん？元気？膝の具合はどう？",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit",
+  "seed": 1003
+}

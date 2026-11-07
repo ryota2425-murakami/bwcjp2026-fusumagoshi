@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1050" width="1600" height="1050">
+<title>ふすまごしの仕組み: 耳(Mac)→ 文字と数値だけ → 脳(Claude API)→ 電話のあとの会話 → 記憶 → 18:00 の便り係(Managed Agents)→ 家族のスマホ</title>
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&amp;family=Klee+One:wght@400;600&amp;display=block');
+    .m{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif}
+    .k{font-family:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif}
+  </style>
+  <marker id="ah" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#24201c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="ahR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#c4432c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="1050" fill="#f3ead8"/>
+<!-- モデルと役: app/fusuma/config.py・app/fusuma/brain/*.py・app/managed/agents/fusuma-family/agent.md。
+     例の 1 行: 架空の通話 S05 の耳の出力 ear_S05.json(lab/runs/eval/、リポジトリでは eval/ear_cache/)。知識カード: app/knowledge/cards.json -->
+<text class="m" x="50" y="58" font-size="32" font-weight="800" fill="#24201c" letter-spacing=".02em">ふすまごしの仕組み — 音は Mac の中、Claude には文字と数値だけ</text>
+<rect x="40" y="80" width="1280" height="410" rx="14" fill="#e99a3c" fill-opacity="0.07" stroke="#24201c" stroke-opacity="0.5" stroke-width="1.6"/>
+<text class="m" x="64" y="120" font-size="26" font-weight="800" fill="#24201c">祖母の家 — Mac 1 台</text>
+<text class="k" x="344" y="120" font-size="16" font-weight="600" fill="#4a423a">音はこの中だけで扱う。電話回線にはつながない</text>
+<g><rect x="64" y="140" width="520" height="238" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="84" y="176" font-size="24" font-weight="800" fill="#24201c">① 耳</text>
+  <text class="k" x="150" y="176" font-size="16" font-weight="600" fill="#4a423a">部屋のマイクで聞く。相手の声は聞かない</text>
+  <g><rect x="84" y="192" width="233" height="80" rx="4" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="100" y="224" font-size="19" font-weight="700" fill="#24201c">呼出音・受話器の音</text>
+  <text class="k" x="100" y="252" font-size="16" font-weight="600" fill="#4a423a">YAMNet(ONNX)+ 登録音</text>
+</g>
+  <g><rect x="331" y="192" width="233" height="80" rx="4" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="347" y="224" font-size="19" font-weight="700" fill="#24201c">声の区間</text>
+  <text class="k" x="347" y="252" font-size="16" font-weight="600" fill="#4a423a">Silero VAD</text>
+</g>
+  <g><rect x="84" y="284" width="233" height="80" rx="4" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="100" y="316" font-size="19" font-weight="700" fill="#24201c">文字起こし</text>
+  <text class="k" x="100" y="344" font-size="16" font-weight="600" fill="#4a423a">whisper.cpp(Metal)</text>
+</g>
+  <g><rect x="331" y="284" width="233" height="80" rx="4" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="347" y="316" font-size="19" font-weight="700" fill="#24201c">声の様子と「間」</text>
+  <text class="k" x="347" y="344" font-size="16" font-weight="600" fill="#4a423a">Praat・いつもの声との差</text>
+</g>
+</g>
+<g><rect x="64" y="390" width="520" height="88" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="k" x="84" y="412" font-size="15" font-weight="600" fill="#4a423a">Claude に渡す 1 行(例・架空の通話 S05)</text>
+  <text class="m" x="84" y="440" font-size="20" font-weight="700" fill="#24201c">14:04:38 祖母「じゃあお願いします。」</text>
+  <text class="m" x="84" y="466" font-size="20" font-weight="700" fill="#24201c">間6.8s 声高-25% 声量-7dB 話速-14%</text>
+</g>
+<rect x="64" y="390" width="6" height="88" fill="#c4432c"/>
+<g><rect x="620" y="140" width="310" height="338" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="640" y="176" font-size="22" font-weight="800" fill="#24201c">④ 電話のあとの会話</text>
+  <rect x="648" y="203" width="62" height="112" fill="#e99a3c" fill-opacity="0.55" stroke="#24201c" stroke-width="2"/><path d="M679 203V315M648 240.333H710M648 277.667H710" stroke="#24201c" stroke-opacity=".55" stroke-width="1.5"/><rect x="645" y="203" width="5" height="112" fill="#4a423a"/><rect x="708" y="203" width="5" height="112" fill="#4a423a"/><rect x="643" y="194" width="72" height="9" rx="2" fill="#4a423a"/><rect x="643" y="315" width="72" height="9" rx="2" fill="#4a423a"/><rect x="650" y="324" width="7" height="10" fill="#4a423a"/><rect x="701" y="324" width="7" height="10" fill="#4a423a"/>
+  <text class="k" x="738" y="228" font-size="18" font-weight="600" fill="#24201c">「そういえば、</text>
+  <text class="k" x="738" y="254" font-size="18" font-weight="600" fill="#24201c">さっきの電話、</text>
+  <text class="k" x="738" y="280" font-size="18" font-weight="600" fill="#24201c">なんだったの?」</text>
+  <text class="k" x="738" y="312" font-size="14.5" font-weight="600" fill="#857a6e">最初の一言は、いつも同じ</text>
+  <text class="m" x="640" y="380" font-size="18" font-weight="700" fill="#24201c">行灯の声で、ひとつずつ聞く</text>
+  <text class="k" x="640" y="410" font-size="15" font-weight="600" fill="#4a423a">声は Mac の中で合成(Qwen3-TTS)</text>
+  <text class="k" x="640" y="434" font-size="15" font-weight="600" fill="#4a423a">通話中は光らない・話さない</text>
+</g>
+<g><rect x="960" y="140" width="340" height="338" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="980" y="176" font-size="22" font-weight="800" fill="#24201c">⑤ 記憶</text>
+  <text class="k" x="1062" y="176" font-size="15" font-weight="600" fill="#4a423a">SQLite。Mac の中が正本</text>
+  <g><rect x="980" y="196" width="300" height="72" rx="2" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="996" y="224" font-size="18" font-weight="700" fill="#24201c">通話カルテ</text>
+  <text class="k" x="996" y="250" font-size="14.5" font-weight="600" fill="#4a423a">1 本ごとの要約と、まとめ役の判断</text>
+</g>
+  <g><rect x="980" y="282" width="300" height="72" rx="2" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6"/>
+  <text class="m" x="996" y="310" font-size="18" font-weight="700" fill="#24201c">暮らしのメモ</text>
+  <text class="k" x="996" y="336" font-size="14.5" font-weight="600" fill="#4a423a">祖母が話したこと(膝、畑の大根…)</text>
+</g>
+  <text class="k" x="980" y="386" font-size="15" font-weight="600" fill="#4a423a">音声は残さない。</text>
+  <text class="k" x="980" y="410" font-size="15" font-weight="600" fill="#4a423a">文字起こしは、判断が出たら消す。</text>
+  <text class="k" x="980" y="434" font-size="15" font-weight="600" fill="#4a423a">問いかける電話は、会話が終わってから。</text>
+</g>
+<path d="M932 300H954" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M40 540H1320" stroke="#c4432c" stroke-width="2.5" stroke-dasharray="10 9"/>
+<path d="M196 478V662" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="206" y="514" width="386" height="58" rx="4" fill="#f3ead8"/>
+<text class="m" x="218" y="538" font-size="21" font-weight="800" fill="#c4432c">② 文字と数値だけ ・ 音声 0 バイト</text>
+<text class="k" x="218" y="562" font-size="15" font-weight="600" fill="#4a423a">送るたびに台帳に記録(文字数・音声 0 バイト)</text>
+<path d="M880 668V484" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="672" y="530" width="200" height="24" rx="3" fill="#f3ead8"/>
+<text class="k" x="866" y="547" font-size="16" font-weight="600" fill="#24201c" text-anchor="end">判断と、次の一言(文字)</text>
+<path d="M1250 478V674" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="986" y="530" width="256" height="24" rx="3" fill="#f3ead8"/>
+<text class="k" x="1236" y="547" font-size="16" font-weight="600" fill="#24201c" text-anchor="end">要約(カルテ・メモ)と家族の文脈</text>
+<text class="k" x="1334" y="535" font-size="15" font-weight="600" fill="#857a6e">↑ 家の中</text>
+<text class="k" x="1334" y="557" font-size="15" font-weight="600" fill="#857a6e">↓ 家の外</text>
+<rect x="40" y="600" width="890" height="380" rx="14" fill="#2c4a6b" fill-opacity="0.05" stroke="#24201c" stroke-opacity="0.5" stroke-width="1.6"/>
+<text class="m" x="224" y="640" font-size="24" font-weight="800" fill="#24201c">③ 脳 — Claude API</text>
+<text class="k" x="470" y="640" font-size="16" font-weight="600" fill="#4a423a">ふすまの向こうの家族会議</text>
+<g><rect x="64" y="668" width="263" height="192" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <circle cx="94" cy="700" r="17" fill="none" stroke="#c4432c" stroke-width="2"/><text class="m" x="94" y="706.5" font-size="18" font-weight="800" fill="#c4432c" text-anchor="middle">聞</text>
+  <text class="m" x="122" y="707" font-size="22" font-weight="800" fill="#24201c">聞き役</text>
+  <text class="m" x="84" y="740" font-size="17" font-weight="700" fill="#4a423a">Claude Haiku 5.5</text>
+  <text class="k" x="84" y="772" font-size="16" font-weight="600" fill="#4a423a">通話中も、10 発話か</text>
+  <text class="k" x="84" y="796" font-size="16" font-weight="600" fill="#4a423a">60 秒ごとに読む</text>
+  <text class="k" x="84" y="822" font-size="16" font-weight="600" fill="#4a423a">段階と怪しい度を、</text>
+  <text class="k" x="84" y="846" font-size="16" font-weight="600" fill="#4a423a">決まった書式で返す</text>
+</g>
+<g><rect x="353" y="668" width="263" height="192" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <circle cx="383" cy="700" r="17" fill="none" stroke="#c4432c" stroke-width="2"/><text class="m" x="383" y="706.5" font-size="18" font-weight="800" fill="#c4432c" text-anchor="middle">反</text>
+  <text class="m" x="411" y="707" font-size="22" font-weight="800" fill="#24201c">反証役</text>
+  <text class="m" x="373" y="740" font-size="17" font-weight="700" fill="#4a423a">Claude Sonnet 5.5</text>
+  <text class="k" x="373" y="772" font-size="16" font-weight="600" fill="#4a423a">聞き役の結論を見ずに、</text>
+  <text class="k" x="373" y="796" font-size="16" font-weight="600" fill="#4a423a">本物の可能性を考える</text>
+  <text class="k" x="373" y="822" font-size="16" font-weight="600" fill="#4a423a">怪しいときだけ呼ぶ</text>
+  <text class="k" x="373" y="846" font-size="16" font-weight="600" fill="#4a423a">出典を Citations で引く</text>
+</g>
+<g><rect x="642" y="668" width="264" height="192" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <circle cx="672" cy="700" r="17" fill="none" stroke="#c4432c" stroke-width="2"/><text class="m" x="672" y="706.5" font-size="18" font-weight="800" fill="#c4432c" text-anchor="middle">ま</text>
+  <text class="m" x="700" y="707" font-size="22" font-weight="800" fill="#24201c">まとめ役</text>
+  <text class="m" x="662" y="740" font-size="17" font-weight="700" fill="#4a423a">Claude Sonnet 5.5</text>
+  <text class="k" x="662" y="772" font-size="16" font-weight="600" fill="#4a423a">記憶と照らして選ぶ</text>
+  <text class="k" x="662" y="796" font-size="16" font-weight="600" fill="#4a423a">黙って記録・夕方の便り・</text>
+  <text class="k" x="662" y="822" font-size="16" font-weight="600" fill="#4a423a">今すぐ家族へ</text>
+  <text class="k" x="662" y="846" font-size="16" font-weight="600" fill="#4a423a">電話のあとの一言も</text>
+</g>
+<path d="M327 764H349" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M616 764H638" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<g><rect x="64" y="876" width="552" height="92" rx="6" fill="#2c4a6b" fill-opacity="0.06" stroke="#2c4a6b" stroke-opacity="0.5" stroke-width="1.6"/>
+  <text class="m" x="84" y="902" font-size="18" font-weight="700" fill="#24201c">知識カード 21 枚(出典つき)</text>
+  <text class="k" x="84" y="928" font-size="15" font-weight="600" fill="#4a423a">警察庁 8・消費者庁 6・国民生活センター 6・全国銀行協会 1</text>
+  <text class="k" x="84" y="952" font-size="15" font-weight="600" fill="#4a423a">反証役には search_result で渡し、Citations で引用させる</text>
+</g>
+<path d="M485 875V864" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<rect x="950" y="600" width="370" height="380" rx="14" fill="#2c4a6b" fill-opacity="0.05" stroke="#24201c" stroke-opacity="0.5" stroke-width="1.6"/>
+<text class="m" x="970" y="638" font-size="22" font-weight="800" fill="#24201c">⑥ 18:00 の便り係</text>
+<text class="k" x="970" y="662" font-size="15" font-weight="600" fill="#4a423a">Claude Managed Agents</text>
+<g><rect x="970" y="680" width="330" height="64" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="988" y="704" font-size="18" font-weight="700" fill="#24201c">記憶ストア fusuma-memory</text>
+  <text class="k" x="988" y="730" font-size="15" font-weight="600" fill="#4a423a">カルテと暮らしのメモの要約、家族の文脈</text>
+</g>
+<g><rect x="970" y="764" width="330" height="64" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="988" y="788" font-size="18" font-weight="700" fill="#24201c">便り係 Claude Sonnet 5.5</text>
+  <text class="k" x="988" y="814" font-size="15" font-weight="600" fill="#4a423a">スキル fusuma-letter で書く</text>
+</g>
+<g><rect x="970" y="848" width="330" height="64" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="988" y="872" font-size="18" font-weight="700" fill="#24201c">採点役(Outcomes)</text>
+  <text class="k" x="988" y="898" font-size="15" font-weight="600" fill="#4a423a">約束を確かめる。採点は最大 3 回</text>
+</g>
+<path d="M1135 746V760" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M1135 830V844" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<text class="k" x="970" y="948" font-size="16" font-weight="600" fill="#c4432c">合格した便りだけが、家族に届く</text>
+<rect x="1345" y="600" width="225" height="380" rx="14" fill="#f8f1e2" fill-opacity="0.6" stroke="#24201c" stroke-opacity="0.4" stroke-width="1.6" stroke-dasharray="6 6"/>
+<text class="m" x="1365" y="638" font-size="22" font-weight="800" fill="#24201c">⑦ 家族のスマホ</text>
+<text class="k" x="1365" y="662" font-size="15" font-weight="600" fill="#4a423a">誠さん・健太さん</text>
+<rect x="1392" y="690" width="130" height="262" rx="20" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.9" stroke-width="2.6"/>
+<path d="M1442 703H1472" stroke="#24201c" stroke-width="2" stroke-linecap="round"/>
+<rect x="1402" y="714" width="110" height="222" rx="8" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.3" stroke-width="1.2"/>
+<text class="m" x="1414" y="760" font-size="13" font-weight="700" fill="#24201c">膝のサプリの</text>
+<text class="m" x="1414" y="777" font-size="13" font-weight="700" fill="#24201c">お電話が</text>
+<text class="m" x="1414" y="794" font-size="13" font-weight="700" fill="#24201c">ありました</text>
+<path d="M1414 818H1500" stroke="#857a6e" stroke-opacity=".6" stroke-width="1.4"/>
+<path d="M1414 832H1500" stroke="#857a6e" stroke-opacity=".6" stroke-width="1.4"/>
+<path d="M1414 846H1500" stroke="#857a6e" stroke-opacity=".6" stroke-width="1.4"/>
+<rect x="1412" y="860" width="90" height="44" rx="4" fill="#e99a3c" fill-opacity="0.22"/>
+<circle cx="1504" cy="716" r="24" fill="#fbf6ec" fill-opacity=".85" stroke="#c4432c" stroke-width="2.2"/>
+<text class="k" x="1504" y="721" font-size="13" font-weight="600" fill="#c4432c" text-anchor="middle">18:00</text>
+<path d="M1302 880H1388" fill="none" stroke="#24201c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah)"/>
+<path d="M800 860V1004H1457V958" fill="none" stroke="#c4432c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#ahR)"/>
+<text class="k" x="820" y="1030" font-size="16" font-weight="600" fill="#c4432c">今すぐの便り — 危ないときだけ。Claude Opus 5.5 がすぐ書いて届ける</text>
+</svg>

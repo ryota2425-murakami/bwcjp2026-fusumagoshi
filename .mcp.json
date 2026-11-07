@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "fusuma-karte": { "command": ".venv/bin/python", "args": ["app/scripts/mcp/karte_mcp.py"] }
+  }
+}

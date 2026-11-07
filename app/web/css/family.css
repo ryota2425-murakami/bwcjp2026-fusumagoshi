@@ -1,0 +1,140 @@
+/* ふすまごし ─ 家族の画面(便りができるまで と、家族のスマホに届いた便り)。台所の画面と同じ明細の作法 */
+:root {
+  --ground: #f1f3f4;
+  --ground-2: #e6e9eb;
+  --ink: #14181b;
+  --ink-2: #434c51;
+  --ink-3: #636c71;
+  --rule: #c7cdd0;
+  --band: #1d4541;
+  --band-ink: #eef2ef;
+  --band-ink-2: #a7bcb7;
+  --amber: #d4861a;
+  --shu: #b3261e;
+  --f-ui: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0f1214; }
+body { font-family: var(--f-ui); color: var(--ink); -webkit-font-smoothing: antialiased; word-break: auto-phrase; }
+::selection { background: rgba(212, 134, 26, .28); color: var(--ink); }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; background: var(--ground); overflow: hidden; }
+time, .t-num { font-variant-numeric: tabular-nums; }
+b, strong, h1, h3 { font-weight: 600; }
+
+/* 上下の帯 */
+.bar { position: absolute; left: 0; top: 0; width: 1920px; height: 56px; background: var(--band); color: var(--band-ink);
+  display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
+.brand { display: flex; align-items: baseline; gap: 12px; white-space: nowrap; }
+.brand b { font-size: 19px; letter-spacing: .06em; }
+.brand span { font-size: 13px; color: var(--band-ink-2); }
+.when span { font-size: 14px; color: var(--band-ink-2); }
+.foot { position: absolute; left: 0; top: 1032px; width: 1920px; height: 48px; background: var(--band); color: var(--band-ink-2);
+  display: flex; align-items: center; gap: 36px; padding: 0 40px; font-size: 13px; white-space: nowrap; }
+.foot .lab2 { color: var(--band-ink); font-weight: 600; font-size: 14px; }
+.foot .it { display: flex; align-items: baseline; gap: 8px; }
+.foot .it b { font-size: 18px; color: var(--band-ink); font-variant-numeric: tabular-nums; }
+.foot .it b.w { font-size: 14px; }
+.foot .note { margin-left: auto; }
+
+/* 本体 */
+main { position: absolute; left: 0; top: 56px; width: 1920px; height: 976px; display: grid; grid-template-columns: 1128px 792px; }
+.ledger-col { padding: 34px 40px 0 40px; border-right: 1px solid var(--rule); }
+.side-col { position: relative; display: flex; justify-content: center; align-items: center; background: var(--ground-2); }
+.sec { display: grid; grid-template-columns: 112px 1fr; }
+.sec + .sec { margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--rule); }
+.lab { font-size: 13px; font-weight: 600; color: var(--ink-2); padding-top: 2px; letter-spacing: .04em; }
+h1 { font-size: 26px; letter-spacing: .04em; line-height: 1.2; }
+.lead { font-size: 14px; line-height: 1.75; color: var(--ink-2); margin-top: 10px; max-width: 46em; }
+.facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 48px; margin-top: 14px; }
+.facts div { display: flex; flex-direction: column; gap: 3px; }
+.facts dt { font-size: 12px; color: var(--ink-3); }
+.facts dd { font-size: 16px; font-weight: 600; white-space: nowrap; }
+.facts dd small { font-size: 12px; font-weight: 400; color: var(--ink-3); margin-left: 8px; }
+
+/* 工程 */
+.tbl { width: 936px; border-collapse: collapse; table-layout: fixed; }
+.tbl th { font-size: 12px; font-weight: 400; color: var(--ink-3); text-align: left; padding: 0 8px 7px; border-bottom: 1px solid var(--ink); }
+.tbl td { height: 48px; padding: 0 8px; border-bottom: 1px solid var(--rule); vertical-align: middle; }
+.flow .n { font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.flow .w { font-size: 15px; font-weight: 600; }
+.flow .d { font-size: 12px; color: var(--ink-2); line-height: 1.5; }
+.flow .s { font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.flow tr { transition: background-color .5s; }
+.flow tr.on { background: rgba(212, 134, 26, .12); }
+.flow tr.on .n { color: var(--ink); font-weight: 600; }
+.flow tr.on .s { color: var(--ink); font-weight: 600; }
+.flow tr.on .s::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); margin-right: 8px; vertical-align: 1px; animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse { 50% { opacity: .25; } }
+.flow tr.ok .n, .flow tr.ok .s { color: var(--ink); }
+.flow tr.ok .s svg { vertical-align: -3px; margin-right: 6px; }
+
+/* 約束 */
+.rubric { list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; }
+.rubric li { display: flex; align-items: center; gap: 12px; font-size: 14px; line-height: 1.45; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.rubric li::before { content: ""; flex: none; width: 15px; height: 15px; border: 1.5px solid var(--ink-3); border-radius: 2px; }
+.rubric.checked li::before { border-color: var(--ink); background: var(--ink) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M3.5 8.2l3 3 6-6.4' fill='none' stroke='%23f1f3f4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>") center / 13px no-repeat; }
+
+/* 採点 */
+#grader { min-height: 110px; }
+#grader .wait { font-size: 14px; color: var(--ink-3); }
+#grader .wait::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--amber); margin-right: 10px; vertical-align: 1px; animation: pulse 1.4s ease-in-out infinite; }
+#grader .row { display: grid; grid-template-columns: 70px 110px 1fr; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--rule); }
+#grader .row:first-child { border-top: 1px solid var(--ink); }
+#grader .row .k { font-size: 13px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+#grader .row .v { font-size: 14px; font-weight: 600; }
+#grader .row .v.ng { color: var(--shu); }
+#grader .row .q { font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+#grader .err { font-size: 14px; color: var(--shu); }
+
+/* ---------------- 家族のスマホ ---------------- */
+.phone { position: relative; width: 460px; height: 880px; border-radius: 46px; padding: 14px; background: var(--ink); box-shadow: 0 30px 60px -24px rgba(15, 18, 20, .55); }
+.phone > * { position: relative; }
+.phone::before { content: ""; position: absolute; inset: 14px; border-radius: 34px; background: #fbfbfa; }
+.sb { height: 38px; display: flex; align-items: center; justify-content: space-between; padding: 6px 28px 0; font-size: 14px; font-weight: 600; color: var(--ink); }
+.sb .ic { display: flex; gap: 6px; align-items: center; fill: var(--ink); color: var(--ink); }
+.app { display: flex; align-items: center; justify-content: space-between; padding: 10px 24px 12px; border-bottom: 1px solid var(--rule); }
+.app .nm { font-size: 16px; font-weight: 600; letter-spacing: .06em; }
+.app .sub { font-size: 11px; color: var(--ink-3); margin-top: 2px; }
+.app .to { text-align: right; font-size: 11px; color: var(--ink-3); line-height: 1.4; }
+.app .to b { display: block; font-size: 12px; color: var(--ink); }
+.thread { height: 660px; overflow-y: auto; scroll-behavior: smooth; padding: 14px 20px 24px; scrollbar-width: none; }
+.thread::-webkit-scrollbar { display: none; }
+.empty { color: var(--ink-3); text-align: center; margin-top: 240px; font-size: 14px; line-height: 1.8; }
+.call { position: absolute; left: 32px; right: 32px; bottom: 32px; height: 54px; border-radius: 14px; border: none; background: var(--band); color: var(--band-ink);
+  display: flex; align-items: center; justify-content: center; gap: 10px; font-family: var(--f-ui); font-weight: 600; font-size: 17px; letter-spacing: .04em; cursor: pointer;
+  transition: background-color .2s; }
+.call:hover { background: #245650; }
+.call:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+/* 便り */
+.letter { background: #fff; border: 1px solid var(--rule); border-radius: 12px; padding: 18px 20px 16px; margin-bottom: 10px; }
+.letter + .letter { margin-top: 18px; }
+.letter .meta { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; color: var(--ink-3); }
+.letter .meta .kind { font-weight: 600; color: var(--ink-2); }
+.letter.immediate .meta .kind { color: var(--shu); }
+.letter .atena { font-size: 13px; color: var(--ink-2); margin-top: 10px; }
+.letter h3 { font-size: 17px; line-height: 1.5; margin-top: 4px; }
+.letter .lbl { font-size: 11px; font-weight: 600; color: var(--ink-3); margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--rule); }
+.letter .lbl small { font-weight: 400; margin-left: 8px; }
+.letter .lbl small b { color: var(--ink); }
+.letter .body { font-size: 13.5px; line-height: 1.8; margin-top: 4px; }
+.letter .why { display: block; font-size: 12px; line-height: 1.65; color: var(--ink-3); margin-top: 6px; }
+.letter .fn { font-size: 10px; color: var(--band); vertical-align: super; margin-left: 2px; }
+.letter .talk { margin-top: 14px; padding: 12px 14px; background: var(--ground); border-radius: 8px; }
+.letter .talk .k { font-size: 11px; font-weight: 600; color: var(--ink-3); }
+.letter .talk .k span { font-weight: 400; margin-left: 8px; }
+.letter .talk .line { font-size: 15px; line-height: 1.7; margin-top: 4px; }
+.letter .memo p { font-size: 12.5px; line-height: 1.75; margin-top: 4px; }
+.letter .memo u { text-decoration: none; font-weight: 600; box-shadow: inset 0 -1.5px 0 var(--ink); }
+.letter .close { font-size: 13.5px; line-height: 1.75; margin-top: 12px; }
+.letter .sign { font-size: 11px; color: var(--ink-3); margin-top: 8px; text-align: right; }
+.letter .srcs { font-size: 11px; line-height: 1.65; color: var(--ink-3); margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule); }
+.letter .srcs a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--rule); }
+.letter .srcs b { color: var(--band); margin-right: 4px; }
+.letter .grade { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 11px; color: var(--ink-2); }
+.letter .grade b { color: var(--ink); }
+.letter .grade span { text-wrap: pretty; }
+.letter.held .body, .letter.held .talk { opacity: .35; }
+.note-ma { font-size: 11px; line-height: 1.5; color: var(--ink-3); text-align: center; margin: 2px 0 6px; text-wrap: balance; }
+.note-ma b { color: var(--ink-2); }

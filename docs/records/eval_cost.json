@@ -1,0 +1,48 @@
+{
+ "note": "usd は評価のプロセスが自分の呼び出しだけを数えた値。usd_without_cache は台帳のトークン数から、キャッシュがなかった場合の費用を換算した値(その回の呼び出しだけが入った時間帯のときだけ)。",
+ "runs": [
+  {
+   "tag": "v6",
+   "usd": 0.5341,
+   "calls": null,
+   "usd_without_cache": null,
+   "tokens": null
+  },
+  {
+   "tag": "v6-r2",
+   "usd": 0.3836,
+   "calls": 39,
+   "usd_without_cache": 0.844,
+   "tokens": {
+    "in": 156,
+    "out": 31598,
+    "cache_read": 408278,
+    "cache_write": 44841
+   }
+  },
+  {
+   "tag": "v6-r3",
+   "usd": 0.3833,
+   "calls": 40,
+   "usd_without_cache": 0.8881,
+   "tokens": {
+    "in": 160,
+    "out": 33605,
+    "cache_read": 430716,
+    "cache_write": 36724
+   }
+  },
+  {
+   "tag": "v6-r4",
+   "usd": 0.3836,
+   "calls": 40,
+   "usd_without_cache": 0.8883,
+   "tokens": {
+    "in": 160,
+    "out": 33275,
+    "cache_read": 430716,
+    "cache_write": 36852
+   }
+  }
+ ]
+}

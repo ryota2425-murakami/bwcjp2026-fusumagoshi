@@ -1,0 +1,19 @@
+# 耳(端末)・脳(Claude)・画面 — Python 3.12 / macOS Apple Silicon
+anthropic>=2.4
+fastapi
+uvicorn[standard]
+websockets
+pydantic
+httpx
+numpy
+scipy
+soundfile
+sounddevice
+praat-parselmouth
+pykakasi
+silero-vad
+onnxruntime
+torch
+torchaudio
+mcp>=2.0
+playwright        # デモ画面の録画(任意)

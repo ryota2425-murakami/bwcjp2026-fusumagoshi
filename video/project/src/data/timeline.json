@@ -1,0 +1,779 @@
+{
+ "duration": 180.0,
+ "scenes": [
+  {
+   "kind": "photo",
+   "start": 0.0,
+   "dur": 11.8,
+   "src": "img/washitsu_dusk.jpg",
+   "filter": "sepia",
+   "zoomFrom": 1.02,
+   "zoomTo": 1.14,
+   "title": ""
+  },
+  {
+   "kind": "video",
+   "start": 11.8,
+   "dur": 5.6,
+   "src": "video/tea_silhouette.mp4",
+   "filter": "sepia",
+   "from": 2.0
+  },
+  {
+   "kind": "video",
+   "start": 17.4,
+   "dur": 5.4,
+   "src": "video/lattice_light.mp4",
+   "filter": "sepia",
+   "from": 0.5
+  },
+  {
+   "kind": "video",
+   "start": 22.8,
+   "dur": 3.6,
+   "src": "video/apartment_night.mp4",
+   "filter": "night",
+   "from": 1.0
+  },
+  {
+   "kind": "video",
+   "start": 26.4,
+   "dur": 3.3,
+   "src": "video/phone_ringing.mp4",
+   "filter": "warm",
+   "from": 0.5
+  },
+  {
+   "kind": "stats",
+   "start": 29.7,
+   "dur": 5.0,
+   "title": "一人で、急かされて、誰にも確かめられない電話",
+   "items": [
+    {
+     "num": "1,423",
+     "unit": "億円",
+     "label": "2025年の特殊詐欺の被害額(過去最悪)",
+     "source": "警察庁 令和7年確定値"
+    },
+    {
+     "num": "33万",
+     "unit": "件",
+     "label": "65歳以上の消費生活相談(2025年度)",
+     "source": "国民生活センター"
+    },
+    {
+     "num": "815万",
+     "unit": "人",
+     "label": "65歳以上の一人暮らし",
+     "source": "総務省統計局 令和7年国勢調査"
+    }
+   ]
+  },
+  {
+   "kind": "title",
+   "start": 34.7,
+   "dur": 11.2
+  },
+  {
+   "kind": "screen",
+   "start": 45.9,
+   "dur": 15.4,
+   "src": "rec/call_S05/screen.mp4",
+   "rate": 1.0,
+   "z0": [
+    1.0,
+    960,
+    540
+   ],
+   "z1": [
+    1.42,
+    930,
+    330
+   ],
+   "badge": null,
+   "from": 12.86
+  },
+  {
+   "kind": "screen",
+   "start": 61.3,
+   "dur": 9.0,
+   "src": "rec/call_S05/screen.mp4",
+   "rate": 1.0,
+   "z0": [
+    1.42,
+    930,
+    330
+   ],
+   "z1": [
+    1.42,
+    930,
+    300
+   ],
+   "badge": null,
+   "from": 46.46
+  },
+  {
+   "kind": "screen",
+   "start": 70.3,
+   "dur": 2.67,
+   "src": "rec/call_S05/screen.mp4",
+   "rate": 20,
+   "z0": [
+    1.0,
+    960,
+    540
+   ],
+   "z1": [
+    1.0,
+    960,
+    540
+   ],
+   "badge": "×20 早送り",
+   "from": 55.46
+  },
+  {
+   "kind": "screen",
+   "start": 72.97,
+   "dur": 8.0,
+   "src": "rec/call_S05/screen.mp4",
+   "rate": 1.0,
+   "z0": [
+    1.42,
+    930,
+    330
+   ],
+   "z1": [
+    1.6,
+    1060,
+    300
+   ],
+   "badge": null,
+   "from": 108.86
+  },
+  {
+   "kind": "screen",
+   "start": 80.97,
+   "dur": 4.0,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.62,
+    1600,
+    560
+   ],
+   "z1": [
+    1.7,
+    1600,
+    600
+   ],
+   "badge": "まとめ役: 夕方の便りへ",
+   "from": 185.56
+  },
+  {
+   "kind": "screen",
+   "start": 85.17,
+   "dur": 3.21,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.25,
+    768,
+    540
+   ],
+   "z1": [
+    1.28,
+    768,
+    560
+   ],
+   "from": 199.43
+  },
+  {
+   "kind": "screen",
+   "start": 88.38,
+   "dur": 5.84,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.28,
+    768,
+    560
+   ],
+   "z1": [
+    1.3,
+    768,
+    580
+   ],
+   "from": 203.73
+  },
+  {
+   "kind": "screen",
+   "start": 94.22,
+   "dur": 9.37,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.25,
+    768,
+    540
+   ],
+   "z1": [
+    1.28,
+    768,
+    560
+   ],
+   "from": 236.86
+  },
+  {
+   "kind": "screen",
+   "start": 103.59,
+   "dur": 2.94,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.28,
+    768,
+    560
+   ],
+   "z1": [
+    1.3,
+    768,
+    580
+   ],
+   "from": 247.3
+  },
+  {
+   "kind": "screen",
+   "start": 106.53,
+   "dur": 8.9,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.0,
+    960,
+    540
+   ],
+   "z1": [
+    1.08,
+    760,
+    540
+   ],
+   "from": 259.62
+  },
+  {
+   "kind": "screen",
+   "start": 115.43,
+   "dur": 4.6,
+   "src": "rec/letter/screen.mp4",
+   "z0": [
+    1.0,
+    960,
+    540
+   ],
+   "z1": [
+    1.25,
+    600,
+    520
+   ],
+   "label": "家族のスマホ(夕方 18:00)",
+   "from": 3.0
+  },
+  {
+   "kind": "screen",
+   "start": 120.03,
+   "dur": 3.6,
+   "src": "rec/letter/screen.mp4",
+   "z0": [
+    1.35,
+    600,
+    760
+   ],
+   "z1": [
+    1.38,
+    600,
+    780
+   ],
+   "badge": "採点役: 書き直し → 合格",
+   "from": 155.91
+  },
+  {
+   "kind": "screen",
+   "start": 123.63,
+   "dur": 5.8,
+   "src": "rec/letter/screen.mp4",
+   "z0": [
+    1.0,
+    960,
+    540
+   ],
+   "z1": [
+    1.55,
+    1495,
+    560
+   ],
+   "label": "家族のスマホ(夕方 18:00)",
+   "from": 164.6
+  },
+  {
+   "kind": "video",
+   "start": 129.43,
+   "dur": 9.8,
+   "src": "video/phone_hands.mp4",
+   "filter": "night",
+   "from": 1.0
+  },
+  {
+   "kind": "svg",
+   "start": 139.23,
+   "dur": 7.6,
+   "src": "img/architecture.svg"
+  },
+  {
+   "kind": "screen",
+   "start": 146.83,
+   "dur": 7.6,
+   "src": "rec/call_S05/screen.mp4",
+   "z0": [
+    1.45,
+    1600,
+    470
+   ],
+   "z1": [
+    1.5,
+    1600,
+    540
+   ],
+   "label": "ふすまの向こうの家族会議",
+   "from": 187.96
+  },
+  {
+   "kind": "svg",
+   "start": 154.43,
+   "dur": 6.88,
+   "src": "img/eval.svg"
+  },
+  {
+   "kind": "claude",
+   "start": 161.31,
+   "dur": 9.05
+  },
+  {
+   "kind": "ending",
+   "start": 170.36,
+   "dur": 9.64,
+   "bg": "img/fusuma_open.jpg",
+   "panel": "img/shoji_panel.jpg"
+  }
+ ],
+ "audio": [
+  {
+   "src": "narration/n01.wav",
+   "start": 0.6,
+   "dur": 5.36,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n02.wav",
+   "start": 6.1,
+   "dur": 5.51,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n03.wav",
+   "start": 12.1,
+   "dur": 4.91,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n04.wav",
+   "start": 17.4,
+   "dur": 5.39,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/ring.wav",
+   "start": 26.6,
+   "dur": 3.1,
+   "volume": 0.5,
+   "fadeOut": 0.4
+  },
+  {
+   "src": "narration/n05.wav",
+   "start": 23.1,
+   "dur": 6.4,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n06.wav",
+   "start": 35.3,
+   "dur": 6.98,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n07.wav",
+   "start": 42.5,
+   "dur": 3.28,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/S05_v.wav",
+   "start": 45.9,
+   "from": 9.2,
+   "dur": 15.4,
+   "volume": 1.0,
+   "fadeIn": 0.15,
+   "fadeOut": 0.25
+  },
+  {
+   "src": "narration/n08.wav",
+   "start": 54.9,
+   "dur": 6.04,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/S05_v.wav",
+   "start": 61.3,
+   "from": 42.8,
+   "dur": 9.0,
+   "volume": 1.0,
+   "fadeIn": 0.15,
+   "fadeOut": 0.25
+  },
+  {
+   "src": "narration/n09.wav",
+   "start": 70.4,
+   "dur": 5.7,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/S05_v.wav",
+   "start": 72.97,
+   "from": 105.2,
+   "dur": 8.0,
+   "volume": 1.0,
+   "fadeIn": 0.15,
+   "fadeOut": 0.25
+  },
+  {
+   "src": "audio/speech/20261105-031501_fusuma.wav",
+   "start": 85.17,
+   "dur": 3.06,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/R02_a1.wav",
+   "start": 88.38,
+   "dur": 5.59,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/speech/20261105-031539_fusuma.wav",
+   "start": 94.22,
+   "dur": 9.22,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/R02_a3.wav",
+   "start": 103.59,
+   "dur": 2.69,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n10.wav",
+   "start": 106.83,
+   "dur": 8.4,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n11.wav",
+   "start": 115.73,
+   "dur": 6.51,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n12.wav",
+   "start": 122.43,
+   "dur": 4.78,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/k01.wav",
+   "start": 129.93,
+   "dur": 6.21,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/g01.wav",
+   "start": 136.54,
+   "dur": 3.31,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n13.wav",
+   "start": 139.93,
+   "dur": 7.08,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n14.wav",
+   "start": 147.13,
+   "dur": 7.53,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n15.wav",
+   "start": 154.63,
+   "dur": 6.58,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n16.wav",
+   "start": 161.61,
+   "dur": 8.55,
+   "volume": 1.0
+  },
+  {
+   "src": "audio/slide.wav",
+   "start": 171.16,
+   "dur": 2.0,
+   "volume": 0.5
+  },
+  {
+   "src": "narration/n17.wav",
+   "start": 174.16,
+   "dur": 2.96,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n18.wav",
+   "start": 177.46,
+   "dur": 1.23,
+   "volume": 1.0
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.7,
+   "end": 5.81,
+   "text": "祖母が、電話の勧誘で、高額な商品を買わされたことがありました。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 6.2,
+   "end": 11.46,
+   "text": "離れて暮らす私たちは、\n電話の向こうで何が起きていたのか、知りませんでした。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 12.2,
+   "end": 16.86,
+   "text": "子どものころ、ふすまの向こうから、祖母の声が聞こえていました。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 17.5,
+   "end": 22.64,
+   "text": "誰と話しているのか。困っていないか。\nなんとなく、分かっていました。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 23.2,
+   "end": 29.35,
+   "text": "いま、祖母は一人で暮らしています。\n電話をしても、元気よ、としか言いません。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 35.4,
+   "end": 42.13,
+   "text": "ふすまごしは、ふすま一枚向こうの家族のように、\n祖母の声だけを、黙って聞きます。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 42.6,
+   "end": 45.63,
+   "text": "電話の最中は、光らない。話さない。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 46.99,
+   "end": 48.35,
+   "text": "はい、もしもし。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 50.85,
+   "end": 55.37,
+   "text": "ああ、はるかぜ健康さん。先週もお電話くださったわね。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 55.0,
+   "end": 60.79,
+   "text": "相手の声は聞きません。祖母が黙っている時間は、\n相手が話している時間です。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 61.88,
+   "end": 64.88,
+   "text": "今日中なら、半額なんですか。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 64.88,
+   "end": 65.77,
+   "text": "はい。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 69.77,
+   "end": 70.63,
+   "text": "はい。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 70.5,
+   "end": 75.95,
+   "text": "声が小さくなり、返事までの間が長くなる。\n断りの言葉が、消えていく。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 77.24,
+   "end": 79.42,
+   "text": "…じゃあ、お願いします。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 85.17,
+   "end": 88.13,
+   "text": "そういえば、さっきの電話、なんだったの？",
+   "who": "fusuma",
+   "size": 44
+  },
+  {
+   "start": 88.38,
+   "end": 93.77,
+   "text": "膝のサプリですって。今日だけ半額だっていうから、\nつい、頼んじゃったのよ。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 94.22,
+   "end": 103.34,
+   "text": "そうだったんだね、半額って言われたらね。\n届いたら一緒に中身を見ようか。この話、\n息子の誠さんにも話しておいていい?",
+   "who": "fusuma",
+   "size": 44
+  },
+  {
+   "start": 103.59,
+   "end": 106.08,
+   "text": "いいわよ。心配性なんだから。",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 106.93,
+   "end": 115.08,
+   "text": "詐欺や強引な勧誘は、考える間を奪います。\nふすまごしは、電話のあとに、立ち止まる間を返します。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 115.83,
+   "end": 122.09,
+   "text": "夕方六時。便り係が、その日の記録を読んで、家族に便りを書きます。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 122.53,
+   "end": 127.06,
+   "text": "警報ではなく、電話をかけるきっかけと、話し方を届けます。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 130.03,
+   "end": 136.14,
+   "text": "もしもし、ばあちゃん？膝の具合どう？\n今度、一緒に温泉行こうか。",
+   "who": "kenta",
+   "size": 44
+  },
+  {
+   "start": 136.54,
+   "end": 139.85,
+   "text": "あら、健太。それがね、今日ね…",
+   "who": "grandma",
+   "size": 44
+  },
+  {
+   "start": 140.03,
+   "end": 146.86,
+   "text": "耳は、手元のマック。音声は外に出さず、\nクロードに届くのは、文字と数値だけです。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 147.23,
+   "end": 154.51,
+   "text": "聞き役、反証する役、まとめ役。\n三つのクロードが、家族会議のように話し合います。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 154.73,
+   "end": 161.06,
+   "text": "試験では、本物の警察や信用金庫の電話に、\n一度も口を出しませんでした。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 161.71,
+   "end": 170.01,
+   "text": "夕方の便りは、断定しない、責めない、\nという約束を守れているか、別のクロードが確かめてから届きます。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 174.26,
+   "end": 176.97,
+   "text": "離れていても、ふすま一枚向こうに。",
+   "who": "narr",
+   "size": 44
+  },
+  {
+   "start": 177.56,
+   "end": 178.54,
+   "text": "ふすまごし。",
+   "who": "narr",
+   "size": 44
+  }
+ ],
+ "music": [
+  {
+   "src": "music/mixkit_614_silent_descent.mp3",
+   "start": 0.0,
+   "from": 0.0,
+   "dur": 46.9,
+   "volume": 0.22,
+   "fadeIn": 2.5,
+   "fadeOut": 2.0
+  },
+  {
+   "src": "music/mixkit_599_possible_dreams.mp3",
+   "start": 105.53,
+   "from": 0.0,
+   "dur": 74.47,
+   "volume": 0.16,
+   "fadeIn": 3.0,
+   "fadeOut": 3.0
+  }
+ ]
+}

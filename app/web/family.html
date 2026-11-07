@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ふすまごし ─ 夕方の便り</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/family.css">
+</head>
+<body>
+<div id="stage">
+
+<header class="bar">
+  <div class="brand"><b>ふすまごし</b><span>家族への便り</span></div>
+  <div class="when"><span>和子さんの台所から ・ 家族のグループ 誠・健太</span></div>
+</header>
+
+<main>
+  <!-- 左: 便りができるまで -->
+  <section class="ledger-col" aria-label="便りができるまで">
+    <div class="sec">
+      <h2 class="lab">便り係</h2>
+      <div class="body">
+        <h1>夕方の便りができるまで</h1>
+        <p class="lead">毎日 18:00 に、Claude Managed Agents の便り係が起きて書きます。届けるのは警報ではなく、電話をかけるきっかけと話し方です。</p>
+        <dl class="facts">
+          <div><dt>実行</dt><dd>毎日 18:00<small>定期実行</small></dd></div>
+          <div><dt>読むもの</dt><dd>記憶ストアの要約だけ<small>音声も全文もない</small></dd></div>
+          <div><dt>確かめる</dt><dd>採点役<small>書き手とは別の文脈</small></dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2 class="lab">工程</h2>
+      <div class="body">
+        <table class="tbl flow" id="flow">
+          <thead><tr><th style="width:56px">順</th><th style="width:330px">工程</th><th>中身</th><th style="width:120px">状態</th></tr></thead>
+          <tbody>
+            <tr data-k="schedule"><td class="n">1</td><td class="w">18:00、便り係が起きる</td><td class="d">定期実行(scheduled deployment)。端末からは何も送らない</td><td class="s"></td></tr>
+            <tr data-k="synced"><td class="n">2</td><td class="w">記憶ストアを読む</td><td class="d">通話カルテ・暮らしのメモ・家族の文脈(要約だけ)</td><td class="s"></td></tr>
+            <tr data-k="write"><td class="n">3</td><td class="w">便りを書く</td><td class="d">スキル fusuma-letter ・ 出典つきの知識カード 21 枚</td><td class="s"></td></tr>
+            <tr data-k="grade"><td class="n">4</td><td class="w">採点役が、約束をひとつずつ確かめる</td><td class="d">Outcomes ・ 書き直しは 3 回まで</td><td class="s"></td></tr>
+            <tr data-k="done"><td class="n">5</td><td class="w">合格した便りだけが、家族に届く</td><td class="d">合格しなければ「今日はお休み」とだけ</td><td class="s"></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2 class="lab">約束</h2>
+      <div class="body">
+        <ul class="rubric" id="rubric">
+          <li>言い切らない(「詐欺です」と書かない)</li>
+          <li>責めない・問い詰めない</li>
+          <li>本人が内緒にした話は書かない</li>
+          <li>住所・電話番号は書かない</li>
+          <li>期限と相談先は、出典のある記述だけ</li>
+          <li>400 字以内</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <h2 class="lab">採点</h2>
+      <div class="body" id="grader"></div>
+    </div>
+  </section>
+
+  <!-- 右: 家族のスマホ -->
+  <section class="side-col">
+    <div class="phone">
+      <div class="sb"><time id="sbTime">18:00</time><span class="ic" aria-hidden="true"><svg width="22" height="14" viewBox="0 0 22 14"><rect x="0" y="9" width="4" height="5" rx="1"/><rect x="6" y="6" width="4" height="8" rx="1"/><rect x="12" y="3" width="4" height="11" rx="1"/><rect x="18" y="0" width="4" height="14" rx="1"/></svg><svg width="28" height="14" viewBox="0 0 28 14"><rect x=".75" y=".75" width="23.5" height="12.5" rx="3.5" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".5"/><rect x="3" y="3" width="17" height="8" rx="1.5"/><rect x="25.5" y="4.5" width="2" height="5" rx="1"/></svg></span></div>
+      <div class="app">
+        <div><div class="nm">ふすまごし</div><div class="sub">和子さんの台所から</div></div>
+        <div class="to">家族のグループ<b>誠・健太</b></div>
+      </div>
+      <div class="thread" id="thread"></div>
+      <button class="call" id="callBtn" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+        <span>ばあちゃんに電話する</span></button>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="lab2">台帳</span>
+  <span class="it">便り係が読むのは<b class="w">記憶ストアの要約だけ</b></span>
+  <span class="it">音声<b>0</b>バイト</span>
+  <span class="note">内緒と判定したメモと、本人が「伝えないで」と言った電話は、便りに出しません。</span>
+</footer>
+</div>
+<script src="/static/js/family.js"></script>
+</body>
+</html>

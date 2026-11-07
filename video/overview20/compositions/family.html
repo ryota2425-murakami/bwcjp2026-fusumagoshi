@@ -1,0 +1,27 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; }
+    #f-wrap { position: absolute; inset: 0; background: #e6e9eb; opacity: 0; }
+    #f-cam { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; }
+    #f-plate { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+    .f-frame { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: visible; }
+    .f-frame rect { fill: none; stroke: #14181b; stroke-width: 3; stroke-dasharray: 1; stroke-dashoffset: 1; }
+  </style>
+  <div id="root" data-composition-id="family" data-width="1920" data-height="1080" data-layout-allow-overflow>
+    <div id="f-wrap">
+      <div id="f-cam">
+        <!-- 本物の家族の画面(便りが届いたあと) -->
+        <img id="f-plate" src="assets/plates/p_family.png" alt="家族のスマホに届いた夕方の便り" />
+        <svg id="f-frame-talk" class="f-frame" viewBox="0 0 1920 1080"><rect x="1341" y="594" width="366" height="112" rx="6" pathLength="1" /></svg>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#f-wrap", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "sine.inOut" }, 0);
+    tl.fromTo("#f-cam", { x: -2534.4, y: -615, scale: 2.32 }, { x: -2688, y: -655, scale: 2.4, duration: 4.2, ease: "sine.inOut" }, 0);
+    tl.fromTo("#f-frame-talk rect", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 2.7);
+    window.__timelines = window.__timelines || {};
+    window.__timelines["family"] = tl;
+  </script>
+</template>

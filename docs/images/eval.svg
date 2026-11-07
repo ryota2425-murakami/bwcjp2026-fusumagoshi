@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 976" width="1600" height="976">
+<title>簡易評価: 本物の電話で口を出した 0/20(キーワード検知 8/20)、危ない電話の見逃し 0/32(12/32)、動き 60/60、危険度 60/60</title>
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&amp;family=Klee+One:wght@400;600&amp;display=block');
+    .m{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif}
+    .k{font-family:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif}
+  </style>
+  <marker id="ah" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#24201c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="ahR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#c4432c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="976" fill="#f3ead8"/>
+<!-- 数字: result_v6.json・result_v6-r2〜r4.json の summary と rows(lab/runs/eval/、リポジトリでは eval/)、
+     費用は docs/records/eval_cost.json。v5 の危険度は result_v5*.json(lab/runs/eval/、リポジトリでは docs/records/eval_history.json) -->
+<text class="m" x="50" y="66" font-size="36" font-weight="800" fill="#24201c" letter-spacing=".03em">簡易評価 — 架空の 15 通話 × 4 回(最終の版 v6)</text>
+<text class="m" x="50" y="104" font-size="19" font-weight="600" fill="#4a423a">本物の電話 5・危ない電話 8・その他 2(勧誘を断った電話・自分でかけた注文)。台本は作者が書いた架空のもの。統計的な主張はしない。</text>
+<text class="k" x="50" y="134" font-size="17" font-weight="600" fill="#857a6e">キーワード検知は、比べるために自作した単純なもの(既存サービスの判定ではない)。1 マス = 1 本の電話の 1 回分。</text>
+<g><rect x="40" y="160" width="1520" height="228" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="70" y="206" font-size="26" font-weight="800" fill="#24201c">本物の電話で、口を出した</text>
+  <text class="k" x="70" y="236" font-size="17" font-weight="600" fill="#4a423a">かかりつけ医院・友人・宅配・警察署・信用金庫(5 本 × 4 回)</text>
+  <text class="m" x="70" y="281" font-size="21" font-weight="700" fill="#24201c">ふすまごし</text>
+  <text class="m" x="70" y="333" font-size="21" font-weight="700" fill="#24201c">キーワード検知</text>
+  <rect x="330" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="357" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="384" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="411" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="455" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="482" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="509" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="536" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="580" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="607" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="634" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="661" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="705" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="732" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="759" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="786" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="830" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="857" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="884" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="911" y="262" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="330" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="357" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="384" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="411" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="455" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="482" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="509" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="536" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="580" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="607" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="634" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="661" y="314" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="705" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="732" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="759" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="786" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="830" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="857" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="884" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="911" y="314" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <text class="k" x="381.5" y="364" font-size="16" font-weight="600" fill="#4a423a" text-anchor="middle">医院</text>
+  <text class="k" x="506.5" y="364" font-size="16" font-weight="600" fill="#4a423a" text-anchor="middle">友人</text>
+  <text class="k" x="631.5" y="364" font-size="16" font-weight="600" fill="#4a423a" text-anchor="middle">宅配</text>
+  <text class="k" x="756.5" y="364" font-size="16" font-weight="600" fill="#4a423a" text-anchor="middle">警察署</text>
+  <text class="k" x="881.5" y="364" font-size="16" font-weight="600" fill="#4a423a" text-anchor="middle">信用金庫</text>
+  <text class="m" x="1440" y="287" font-size="46" font-weight="800" fill="#24201c" text-anchor="end">0</text>
+  <text class="m" x="1452" y="287" font-size="24" font-weight="600" fill="#4a423a">/ 20</text>
+  <text class="m" x="1440" y="339" font-size="46" font-weight="800" fill="#c4432c" text-anchor="end">8</text>
+  <text class="m" x="1452" y="339" font-size="24" font-weight="600" fill="#4a423a">/ 20</text>
+  <text class="k" x="960" y="300" font-size="18" font-weight="600" fill="#c4432c">「警察」「印鑑」「信用金庫」「通帳」に反応して、</text>
+  <text class="k" x="960" y="326" font-size="18" font-weight="600" fill="#c4432c">本物の警察署と信用金庫で、4 回とも警報</text>
+</g>
+<g><rect x="40" y="412" width="1520" height="298" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="70" y="458" font-size="26" font-weight="800" fill="#24201c">危ない電話を、見逃した</text>
+  <text class="k" x="70" y="488" font-size="17" font-weight="600" fill="#4a423a">詐欺 4・勧誘 4(8 本 × 4 回)</text>
+  <text class="m" x="70" y="533" font-size="21" font-weight="700" fill="#24201c">ふすまごし</text>
+  <text class="m" x="70" y="585" font-size="21" font-weight="700" fill="#24201c">キーワード検知</text>
+  <rect x="330" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="357" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="384" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="411" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="455" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="482" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="509" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="536" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="580" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="607" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="634" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="661" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="705" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="732" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="759" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="786" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="830" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="857" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="884" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="911" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="955" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="982" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1009" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1036" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1080" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1107" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1134" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1161" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1205" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1232" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1259" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="1286" y="514" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="330" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="357" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="384" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="411" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="455" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="482" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="509" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="536" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="580" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="607" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="634" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="661" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="705" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="732" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="759" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="786" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="830" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="857" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="884" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="911" y="566" width="22" height="22" rx="3" fill="#fbf6ec" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.4"/>
+  <rect x="955" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="982" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1009" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1036" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1080" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1107" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1134" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1161" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1205" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1232" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1259" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <rect x="1286" y="566" width="22" height="22" rx="3" fill="#c4432c" stroke="#c4432c" stroke-opacity="1" stroke-width="1.4"/>
+  <text class="k" x="381.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">孫を名乗る</text>
+  <text class="k" x="506.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">還付金</text>
+  <text class="k" x="631.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">カード詐欺盗</text>
+  <text class="k" x="756.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">架空請求</text>
+  <text class="k" x="881.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">健康食品</text>
+  <text class="k" x="1006.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">海産物</text>
+  <text class="k" x="1131.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">光回線</text>
+  <text class="k" x="1256.5" y="616" font-size="15" font-weight="600" fill="#4a423a" text-anchor="middle">屋根点検</text>
+  <path d="M330 628V634H808V628" fill="none" stroke="#857a6e" stroke-width="1.4"/>
+  <text class="k" x="569" y="656" font-size="15" font-weight="600" fill="#857a6e" text-anchor="middle">詐欺</text>
+  <path d="M830 628V634H1308V628" fill="none" stroke="#857a6e" stroke-width="1.4"/>
+  <text class="k" x="1069" y="656" font-size="15" font-weight="600" fill="#857a6e" text-anchor="middle">勧誘</text>
+  <text class="m" x="1440" y="539" font-size="46" font-weight="800" fill="#24201c" text-anchor="end">0</text>
+  <text class="m" x="1452" y="539" font-size="24" font-weight="600" fill="#4a423a">/ 32</text>
+  <text class="m" x="1440" y="591" font-size="46" font-weight="800" fill="#c4432c" text-anchor="end">12</text>
+  <text class="m" x="1452" y="591" font-size="24" font-weight="600" fill="#4a423a">/ 32</text>
+  <text class="k" x="330" y="690" font-size="18" font-weight="600" fill="#c4432c">海産物・光回線・屋根の点検は決まった言葉が出ず、キーワード検知は 4 回とも見逃した</text>
+</g>
+<g><rect x="40" y="730" width="490" height="168" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="64" y="768" font-size="22" font-weight="800" fill="#24201c">動きが期待どおり</text>
+  <text class="k" x="64" y="796" font-size="16" font-weight="600" fill="#4a423a">黙る・夕方の便り・今すぐ家族へ</text>
+  <text class="m" x="64" y="866" font-size="52" font-weight="800" fill="#24201c">60</text>
+  <text class="m" x="136" y="866" font-size="24" font-weight="600" fill="#4a423a">/ 60</text>
+</g>
+<g><rect x="555" y="730" width="490" height="168" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="579" y="768" font-size="22" font-weight="800" fill="#24201c">危険度の判定が期待どおり</text>
+  <text class="k" x="579" y="796" font-size="16" font-weight="600" fill="#4a423a">低・中・高</text>
+  <text class="m" x="579" y="866" font-size="52" font-weight="800" fill="#24201c">60</text>
+  <text class="m" x="651" y="866" font-size="24" font-weight="600" fill="#4a423a">/ 60</text>
+  <text class="k" x="760" y="866" font-size="16" font-weight="600" fill="#857a6e">前の版 v5 は 55/60</text>
+</g>
+<g><rect x="1070" y="730" width="490" height="168" rx="8" fill="#f8f1e2" stroke="#24201c" stroke-opacity="0.55" stroke-width="1.6"/>
+  <text class="m" x="1094" y="768" font-size="22" font-weight="800" fill="#24201c">費用(15 通話を 1 回)</text>
+  <text class="k" x="1094" y="796" font-size="16" font-weight="600" fill="#4a423a">Claude API の料金。評価の呼び出しだけ</text>
+  <text class="m" x="1094" y="866" font-size="44" font-weight="800" fill="#24201c">約 $0.38</text>
+  <text class="k" x="1300" y="830" font-size="15" font-weight="600" fill="#4a423a">1 回目 $0.53(キャッシュを書く回)</text>
+  <text class="k" x="1300" y="854" font-size="15" font-weight="600" fill="#4a423a">4 回の合計 $1.68</text>
+  <text class="k" x="1300" y="878" font-size="15" font-weight="600" fill="#857a6e">キャッシュがなければ $0.84〜0.89</text>
+</g>
+<text class="k" x="50" y="930" font-size="15" font-weight="600" fill="#857a6e">記録: eval/result_v6.json・result_v6-r2〜r4.json(各回の summary と rows)、docs/records/eval_cost.json。v5 は docs/records/eval_history.json。</text>
+<text class="k" x="50" y="954" font-size="15" font-weight="600" fill="#857a6e">※ 危険度は、期待が「中」の電話を「高」と読んでも、黙らずに知らせていれば合っているとみなす(app/scripts/run_eval.py)。</text>
+</svg>

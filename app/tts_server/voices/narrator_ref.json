@@ -1,0 +1,7 @@
+{
+  "persona": "narrator",
+  "instruct": "50代の日本人男性の声。低めで、あたたかく、落ち着いた語り口。ドキュメンタリーのナレーターのように、誠実に、ゆっくり丁寧に話す。",
+  "ref_text": "子どものころ、ふすまの向こうから、祖母の声が聞こえていました。",
+  "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-8bit",
+  "seed": 3104
+}

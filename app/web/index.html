@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ふすまごし ─ 台所の画面</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/fusuma.css">
+</head>
+<body>
+<div id="stage">
+
+<!-- 上の帯: 名前・いまの様子・日付と時計 -->
+<header class="bar">
+  <div class="brand"><b>ふすまごし</b><span>台所の端末</span></div>
+  <ol class="steps" id="status" aria-label="いまの様子">
+    <li data-s="idle"><b>見守り中</b><span>電話を待つ</span></li>
+    <li data-s="call"><b>電話中</b><span>光らない・話さない</span></li>
+    <li data-s="after"><b>電話のあと</b><span>話しかけるのは、ここだけ</span></li>
+  </ol>
+  <div class="when"><span id="rDate"></span><time class="clock" id="clock">--:--</time></div>
+</header>
+
+<main>
+  <!-- 左: 通話明細(いつもの日は、これまでの記録) -->
+  <section class="ledger-col" id="leftPage" aria-label="通話明細">
+    <div class="sec head">
+      <h2 class="lab" id="headLab">通話</h2>
+      <div class="body">
+        <div class="title"><h1 id="title">通話明細</h1><span class="callid" id="callId"></span></div>
+        <dl class="facts" id="facts"></dl>
+      </div>
+    </div>
+    <div id="sheet"></div>
+  </section>
+
+  <!-- 右: 行灯・台所の音・電話のあとのお話・判定 -->
+  <section class="side-col" id="rightPage">
+    <div class="sec andon-sec">
+      <h2 class="lab">行灯</h2>
+      <div class="body andon-body">
+        <figure class="andon">
+          <!-- 行灯のディスプレイ。Pi の画面と同じみずち(rig.js)を、同じ合図で動かす -->
+          <div class="device" aria-label="行灯の画面">
+            <div class="screen" id="screen"><div class="floor" id="floor"></div><div id="mizuchi"></div></div>
+          </div>
+          <figcaption><span class="mood" id="moodName">見守り</span><span>行灯の画面と同じ動き</span><span class="speaker" id="speaker"></span></figcaption>
+        </figure>
+        <div class="say">
+          <div id="andonCaption"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec meter-sec">
+      <h2 class="lab">台所の音</h2>
+      <div class="body">
+        <svg id="meter" viewBox="0 0 712 44" preserveAspectRatio="none" aria-hidden="true"><path class="base" d="M0 22 H712"/><path id="meterPath" d="M0 22 H712"/></svg>
+        <div class="meter-l" id="meterL">静かなときだけ、話しかけます</div>
+      </div>
+    </div>
+
+    <div class="sec dialog-sec">
+      <h2 class="lab">お話</h2>
+      <div class="body" id="dialog"></div>
+    </div>
+
+    <div class="sec council-sec">
+      <h2 class="lab">判定</h2>
+      <div class="body">
+        <p class="council-h">3 つの役が別々に考え、まとめ役が決めます</p>
+        <div class="council">
+          <article id="listenerBody" class="role"></article>
+          <article id="rebuttalBody" class="role"></article>
+          <article id="familyBody" class="role"></article>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 下の帯: 台帳 -->
+<footer class="foot" id="foot"></footer>
+
+<div class="toast" id="toast" role="status"></div>
+</div>
+<script src="/static/lantern/rig.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>

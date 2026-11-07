@@ -1,0 +1,3 @@
+# 便り係の作業場。外へは一切つながない(記憶ストアとスキルだけで書く)。
+name: fusuma-home
+config: {type: cloud, networking: {type: limited, allow_package_managers: false, allow_mcp_servers: false}}

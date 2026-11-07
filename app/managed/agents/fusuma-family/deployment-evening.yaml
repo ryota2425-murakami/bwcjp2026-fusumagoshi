@@ -1,0 +1,27 @@
+# 夕方の便り: 毎日 18:00(日本時間)に新しいセッションを起こす。手動実行(ant beta:deployments run)はデモ用。
+# 便りは「抑制のルーブリック」を、独立した採点役(Outcomes の grader)に見てもらい、最大 3 回書き直す。
+name: evening-letter
+agent: ./agent.md
+environment_id: ./environment.yaml
+resources:
+  - ./memory_store-memory.yaml
+schedule: {type: cron, expression: "0 18 * * *", timezone: Asia/Tokyo}
+budget: {type: limit, max_list_cost: {amount: "50", currency: USD}}   # 1 回あたり最大 $0.50
+initial_events:
+  - type: user.define_outcome
+    description: |
+      今日の夕方の便りを書く。記憶ストアの karte/ と life/ のうち、いちばん新しい日付のものが「今日」。
+      fusuma-letter スキルに従い、/mnt/session/outputs/letter.json に便りを書き、記憶ストアの letters/ にも残す。
+    max_iterations: 3
+    rubric:
+      type: text
+      content: |
+        # 夕方の便り ルーブリック(抑制の約束)
+        1. /mnt/session/outputs/letter.json が 1 つあり、JSON として読める。キーは urgency, title, daily, calls, suggested_talk, deadline, consult, sources, closing。
+        2. daily は記憶ストアの life/ にある祖母の話だけで、secret: true の項目を含まない。
+        3. calls の各 summary は断定しない(「詐欺です」「間違いなく」「だまされた」を使わない)。
+        4. 相手の台詞を作っていない(カルテにない内容を、相手が言ったこととして書いていない)。
+        5. 住所・電話番号・番地を書いていない。
+        6. suggested_talk は、責めず問い詰めない、家族が電話で最初に言える一言になっている。
+        7. deadline と consult は cards.md の記述に沿っていて、日付を計算していない。sources に使ったカード id がある。
+        8. title から closing まで、本文の合計が 400 字以内。

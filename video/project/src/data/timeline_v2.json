@@ -1,0 +1,2077 @@
+{
+ "duration": 179.46,
+ "scenes": [
+  {
+   "kind": "black",
+   "start": 0.0,
+   "dur": 1.4
+  },
+  {
+   "kind": "photo",
+   "start": 1.2,
+   "dur": 5.17,
+   "src": "img/fusuma_ajar.jpg",
+   "grade": "dusk",
+   "z0": 1.06,
+   "z1": 1.12,
+   "y0": 40,
+   "y1": 20,
+   "fromBlack": 1.2,
+   "vignette": 0.6
+  },
+  {
+   "kind": "photo",
+   "start": 6.37,
+   "dur": 5.42,
+   "src": "img/getty_family_meal.jpg",
+   "grade": "sepia(.45) saturate(.78) brightness(.93) contrast(.95)",
+   "z0": 1.05,
+   "z1": 1.11,
+   "vignette": 0.62,
+   "notes": [
+    {
+     "t0": 0.4,
+     "text": "イメージ",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "video",
+   "start": 11.79,
+   "dur": 2.0,
+   "src": "video/phone_ringing.mp4",
+   "from": 0.3,
+   "grade": "pale",
+   "z0": 1.03,
+   "z1": 1.06
+  },
+  {
+   "kind": "photo",
+   "start": 13.79,
+   "dur": 11.36,
+   "src": "img/phone_still.jpg",
+   "grade": "pale",
+   "z0": 1.05,
+   "z1": 1.18,
+   "notes": [
+    {
+     "t0": 0.1,
+     "t1": 3.6,
+     "text": "作者の祖母に、実際にあったこと",
+     "side": "left"
+    },
+    {
+     "t0": 5.8100000000000005,
+     "text": "契約当事者が65歳以上の消費生活相談 33万497件(2025年度・国民生活センター)",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "video",
+   "start": 25.15,
+   "dur": 2.2,
+   "src": "video/apartment_night.mp4",
+   "from": 1.0,
+   "grade": "night",
+   "z0": 1.02,
+   "z1": 1.06
+  },
+  {
+   "kind": "video",
+   "start": 27.35,
+   "dur": 2.3,
+   "src": "video/phone_hands.mp4",
+   "from": 2.5,
+   "grade": "night",
+   "z0": 1.02,
+   "z1": 1.05,
+   "callEnd": {
+    "t0": 0.1
+   }
+  },
+  {
+   "kind": "photo",
+   "start": 29.65,
+   "dur": 3.22,
+   "src": "img/washitsu_dusk.jpg",
+   "grade": "dusk",
+   "z0": 1.04,
+   "z1": 1.08
+  },
+  {
+   "kind": "photo",
+   "start": 32.87,
+   "dur": 4.43,
+   "src": "img/getty_hands_table.jpg",
+   "grade": "dusk",
+   "z0": 1.03,
+   "z1": 1.09,
+   "notes": [
+    {
+     "t0": 0.3,
+     "text": "65歳以上の一人暮らし 815万3千人(令和7年国勢調査)",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "andon",
+   "start": 37.3,
+   "dur": 10.2,
+   "T": {
+    "lamp": 1.3,
+    "mic": 5.4,
+    "phone": 6.6,
+    "only": 7.8,
+    "off": 9.2
+   }
+  },
+  {
+   "kind": "char",
+   "start": 37.3,
+   "dur": 10.2,
+   "src": "char/s04_andon.mov",
+   "layer": 1,
+   "fadeIn": 0.01,
+   "fadeOut": 0.2
+  },
+  {
+   "kind": "video",
+   "start": 47.5,
+   "dur": 0.6,
+   "src": "video/phone_ringing.mp4",
+   "from": 0.6,
+   "grade": "day",
+   "z0": 1.06,
+   "z1": 1.08
+  },
+  {
+   "kind": "rec",
+   "start": 48.1,
+   "dur": 3.85,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 13.0,
+   "rate": 3.96,
+   "z0": [
+    1.95,
+    440,
+    407
+   ],
+   "z1": [
+    1.95,
+    440,
+    430
+   ],
+   "badge": "×4 早送り",
+   "overlays": [
+    {
+     "kind": "note",
+     "t0": 0.2,
+     "t1": 3.6,
+     "x": 1150,
+     "y": 640,
+     "w": 600,
+     "size": 30,
+     "text": "呼出音を聞き分けて(YAMNet)、ここからは黙って聞く"
+    },
+    {
+     "kind": "note",
+     "t0": 0.5,
+     "t1": 3.7,
+     "x": 1150,
+     "y": 150,
+     "w": 640,
+     "size": 28,
+     "color": "#fbf7ec",
+     "rot": 1,
+     "text": "この帳面は、祖母の台所の画面。家族に届くのは、夕方の便りだけ。"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 51.95,
+   "dur": 2.84,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 28.23,
+   "rate": 1.0,
+   "z0": [
+    1.95,
+    440,
+    430
+   ],
+   "z1": [
+    1.9,
+    450,
+    450
+   ],
+   "badge": null,
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 54.79,
+   "dur": 0.68,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 31.07,
+   "rate": 24,
+   "z0": [
+    1.9,
+    450,
+    450
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": "×24 早送り",
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 55.47,
+   "dur": 2.62,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 47.47,
+   "rate": 1.0,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": null,
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 58.09,
+   "dur": 0.18,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 50.09,
+   "rate": 30,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": "×30 早送り",
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 58.27,
+   "dur": 8.9,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 55.44,
+   "rate": 1.0,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.5,
+    540,
+    600
+   ],
+   "badge": "実時間",
+   "overlays": [
+    {
+     "kind": "timer",
+     "t0": 0.0,
+     "t1": 8.900000000000006,
+     "max": 8.9,
+     "x": 1250,
+     "y": 560,
+     "line": "この沈黙のあいだ、話しているのは、たぶん電話の相手。"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 67.17,
+   "dur": 2.47,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 64.34,
+   "rate": 1.0,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": null,
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 69.64,
+   "dur": 5.73,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 66.81,
+   "rate": 7.9,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": "×7.9 早送り",
+   "overlays": [
+    {
+     "kind": "stamp",
+     "t0": 0.25,
+     "x": 800,
+     "y": 450,
+     "text": "断りの言葉",
+     "size": 38
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 75.37,
+   "dur": 1.94,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 112.08,
+   "rate": 1.0,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.5,
+    540,
+    600
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "stamp",
+     "t0": 0.4,
+     "x": 760,
+     "y": 850,
+     "text": "いつもの声より -7 dB",
+     "size": 36
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 77.31,
+   "dur": 0.7,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 114.02,
+   "rate": 60,
+   "z0": [
+    1.45,
+    520,
+    588
+   ],
+   "z1": [
+    1.45,
+    520,
+    588
+   ],
+   "badge": "×60 早送り",
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 78.01,
+   "dur": 0.8,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 156.21,
+   "rate": 1.0,
+   "z0": [
+    1.35,
+    560,
+    860
+   ],
+   "z1": [
+    1.38,
+    560,
+    870
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "note",
+     "t0": 0.15,
+     "x": 1130,
+     "y": 120,
+     "w": 520,
+     "size": 28,
+     "text": "行灯は、最後まで消えたまま"
+    },
+    {
+     "kind": "stamp",
+     "t0": 0.3,
+     "x": 880,
+     "y": 430,
+     "text": "断りの言葉 前半1 → 後半0",
+     "size": 28,
+     "rot": 3
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "ura",
+   "start": 78.81,
+   "dur": 9.31,
+   "s05": [
+    [
+     0.99,
+     1.77
+    ],
+    [
+     4.77,
+     8.73
+    ],
+    [
+     15.23,
+     17.67
+    ],
+    [
+     25.67,
+     27.57
+    ],
+    [
+     34.57,
+     36.64
+    ],
+    [
+     37.14,
+     37.41
+    ],
+    [
+     41.91,
+     42.19
+    ],
+    [
+     51.19,
+     53.41
+    ],
+    [
+     60.91,
+     63.76
+    ],
+    [
+     64.36,
+     64.63
+    ],
+    [
+     72.63,
+     75.34
+    ],
+    [
+     81.34,
+     84.15
+    ],
+    [
+     89.65,
+     92.13
+    ],
+    [
+     99.13,
+     100.57
+    ],
+    [
+     103.57,
+     106.54
+    ],
+    [
+     110.54,
+     112.57
+    ],
+    [
+     115.57,
+     117.05
+    ]
+   ],
+   "s05Total": 118.25,
+   "s11": [
+    [
+     0.89,
+     1.86
+    ],
+    [
+     3.06,
+     4.95
+    ],
+    [
+     6.95,
+     10.13
+    ],
+    [
+     12.63,
+     14.0
+    ],
+    [
+     15.8,
+     19.33
+    ],
+    [
+     21.53,
+     23.63
+    ],
+    [
+     25.13,
+     26.76
+    ],
+    [
+     27.76,
+     28.78
+    ]
+   ],
+   "s11Total": 29.78,
+   "line": "14:02:38 祖母「じゃあお願いします。」 間6.8s 声高-25% 声量-7dB 話速-14%",
+   "m": {
+    "gMax": 8.9,
+    "fMax": 2.3,
+    "gSelf": 29,
+    "fSelf": 55,
+    "gOther": 71,
+    "fOther": 45,
+    "dB": -7
+   },
+   "warp": [
+    [
+     0,
+     0
+    ],
+    [
+     0.5,
+     2.1
+    ],
+    [
+     5.09,
+     7.5
+    ]
+   ],
+   "postTime": "14:02"
+  },
+  {
+   "kind": "video",
+   "start": 78.46,
+   "dur": 1.3,
+   "src": "video/getty_doors.mp4",
+   "from": 2.0,
+   "rate": 2.0,
+   "grade": "warm",
+   "z0": 1.25,
+   "z1": 1.42,
+   "x": 160,
+   "layer": 1
+  },
+  {
+   "kind": "kaigi",
+   "start": 88.12,
+   "dur": 12.31,
+   "score": 0.9,
+   "genuine": "中",
+   "restraint": "お金はまだ動いておらず、訪問や口止めもないため今すぐ送る必要はなく、夕方の便りで家族が落ち着いて電話すれば間に合います。",
+   "cite": "電話勧誘の名乗り義務と再勧誘の禁止",
+   "postTime": "14:03",
+   "warp": [
+    [
+     0,
+     0
+    ],
+    [
+     2.69,
+     2.9
+    ],
+    [
+     7.56,
+     7.5
+    ]
+   ]
+  },
+  {
+   "kind": "slide",
+   "start": 99.68,
+   "dur": 0.75,
+   "src": "drawn",
+   "mode": "close",
+   "at": 0.0,
+   "len": 0.55,
+   "layer": 2
+  },
+  {
+   "kind": "rec",
+   "start": 100.43,
+   "dur": 0.5,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 203.4,
+   "rate": 4.0,
+   "z0": [
+    1.5,
+    1430,
+    330
+   ],
+   "z1": [
+    1.5,
+    1430,
+    330
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "count",
+     "t0": 0.0,
+     "t1": 0.3,
+     "hold": 0.2,
+     "from": 0,
+     "to": 8,
+     "x": 1200,
+     "y": 820,
+     "label": "部屋が静かになってから"
+    },
+    {
+     "kind": "corner",
+     "t0": 0.0,
+     "text": "会話は一部を詰めています",
+     "side": "right"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 100.93,
+   "dur": 2.77,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 205.97,
+   "rate": 1.0,
+   "z0": [
+    1.5,
+    1430,
+    330
+   ],
+   "z1": [
+    1.52,
+    1430,
+    340
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "note",
+     "t0": 0.15,
+     "x": 120,
+     "y": 740,
+     "w": 560,
+     "size": 30,
+     "text": "質問は、一度にひとつ",
+     "color": "#fff7d6"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 103.53,
+   "dur": 3.74,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 211.88,
+   "rate": 1.0,
+   "z0": [
+    1.52,
+    1430,
+    340
+   ],
+   "z1": [
+    1.54,
+    1430,
+    350
+   ],
+   "badge": null,
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 107.1,
+   "dur": 2.9,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 261.23,
+   "rate": 1.0,
+   "z0": [
+    1.5,
+    1430,
+    330
+   ],
+   "z1": [
+    1.52,
+    1430,
+    340
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "note",
+     "t0": 0.15,
+     "x": 120,
+     "y": 740,
+     "w": 560,
+     "size": 30,
+     "text": "家族に伝える前に、本人に聞く",
+     "color": "#fff7d6"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "rec",
+   "start": 109.83,
+   "dur": 2.12,
+   "src": "rec/call_S05_v4/screen.mp4",
+   "from": 265.35,
+   "rate": 1.0,
+   "z0": [
+    1.52,
+    1430,
+    340
+   ],
+   "z1": [
+    1.54,
+    1430,
+    350
+   ],
+   "badge": null,
+   "overlays": [],
+   "layer": 0
+  },
+  {
+   "kind": "char",
+   "start": 100.43,
+   "dur": 0.65,
+   "src": "char/pi_after.mp4",
+   "from": 3.4,
+   "rate": 4.0,
+   "panel": true,
+   "x": 46,
+   "y": 62,
+   "w": 440,
+   "label": "Pi の画面(実機)",
+   "sub": "同じ合図で、話す・聞く・うなずく",
+   "layer": 1,
+   "fadeIn": 0.3,
+   "rise": true,
+   "fadeOut": 0.0,
+   "cardBottom": 478,
+   "note": "Pi に送るのは、気分の名前と秒数と口の開きだけ。文字は一文字も送らない"
+  },
+  {
+   "kind": "char",
+   "start": 100.93,
+   "dur": 2.92,
+   "src": "char/pi_after.mp4",
+   "from": 5.97,
+   "rate": 1.0,
+   "panel": true,
+   "x": 46,
+   "y": 62,
+   "w": 440,
+   "label": "Pi の画面(実機)",
+   "sub": "同じ合図で、話す・聞く・うなずく",
+   "layer": 1,
+   "fadeIn": 0.15,
+   "rise": false,
+   "fadeOut": 0.0,
+   "cardBottom": 478,
+   "note": "Pi に送るのは、気分の名前と秒数と口の開きだけ。文字は一文字も送らない"
+  },
+  {
+   "kind": "char",
+   "start": 103.53,
+   "dur": 3.89,
+   "src": "char/pi_after.mp4",
+   "from": 11.88,
+   "rate": 1.0,
+   "panel": true,
+   "x": 46,
+   "y": 62,
+   "w": 440,
+   "label": "Pi の画面(実機)",
+   "sub": "同じ合図で、話す・聞く・うなずく",
+   "layer": 1,
+   "fadeIn": 0.15,
+   "rise": false,
+   "fadeOut": 0.0,
+   "cardBottom": 478,
+   "note": "Pi に送るのは、気分の名前と秒数と口の開きだけ。文字は一文字も送らない"
+  },
+  {
+   "kind": "char",
+   "start": 107.1,
+   "dur": 3.05,
+   "src": "char/pi_after.mp4",
+   "from": 61.23,
+   "rate": 1.0,
+   "panel": true,
+   "x": 46,
+   "y": 62,
+   "w": 440,
+   "label": "Pi の画面(実機)",
+   "sub": "同じ合図で、話す・聞く・うなずく",
+   "layer": 1,
+   "fadeIn": 0.15,
+   "rise": false,
+   "fadeOut": 0.0,
+   "cardBottom": 478,
+   "note": "Pi に送るのは、気分の名前と秒数と口の開きだけ。文字は一文字も送らない"
+  },
+  {
+   "kind": "char",
+   "start": 109.83,
+   "dur": 2.12,
+   "src": "char/pi_after.mp4",
+   "from": 65.35,
+   "rate": 1.0,
+   "panel": true,
+   "x": 46,
+   "y": 62,
+   "w": 440,
+   "label": "Pi の画面(実機)",
+   "sub": "同じ合図で、話す・聞く・うなずく",
+   "layer": 1,
+   "fadeIn": 0.15,
+   "rise": false,
+   "fadeOut": 0.3,
+   "cardBottom": 478,
+   "note": "Pi に送るのは、気分の名前と秒数と口の開きだけ。文字は一文字も送らない"
+  },
+  {
+   "kind": "tsui",
+   "start": 111.78,
+   "dur": 5.62,
+   "lines": [
+    "そういえば、さっきの電話、なんだったの?",
+    "膝のサプリですって。今日だけ半額だっていうから、つい、頼んじゃったのよ。",
+    "そうだったんだ、膝のこと気になってたものね。",
+    "この話、健太にも話しておいていい?",
+    "いいわよ。心配性なんだから。"
+   ],
+   "fromClock": "14:05",
+   "video": "video/getty_room_light.mp4",
+   "from": 4.0
+  },
+  {
+   "kind": "video",
+   "start": 117.4,
+   "dur": 1.7,
+   "src": "video/getty_teishoku.mp4",
+   "from": 2.0,
+   "grade": "warm",
+   "z0": 1.03,
+   "z1": 1.06,
+   "notes": [
+    {
+     "t0": 0.2,
+     "text": "18:00 健太の夕飯どき(イメージ)",
+     "side": "left"
+    }
+   ],
+   "layer": 1
+  },
+  {
+   "kind": "rec",
+   "start": 119.0,
+   "dur": 14.08,
+   "src": "rec/letter_v4/screen.mp4",
+   "from": 128.65,
+   "rate": 1.0,
+   "z0": [
+    1.55,
+    1525,
+    380
+   ],
+   "z1": [
+    1.55,
+    1525,
+    700
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "letterflow",
+     "t0": 7.690000000000003,
+     "evals": [
+      {
+       "ok": false,
+       "text": "…合計は約440字になる。400字を超えている。"
+      },
+      {
+       "ok": true,
+       "text": "本文の合計は約 300 字で、400 字以内。"
+      }
+     ],
+     "tool": "read /mnt/memory/fusuma-memory/karte/2026-11-06/20261106-1400-3560.md"
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "char",
+   "start": 119.0,
+   "dur": 7.2,
+   "src": "char/pi_letter.mp4",
+   "from": 2.65,
+   "rate": 1.0,
+   "panel": true,
+   "x": 52,
+   "y": 62,
+   "w": 420,
+   "label": "家族の机の Pi(実機)",
+   "sub": "届くのは「便りが来た」ことだけ",
+   "layer": 1,
+   "fadeIn": 0.3,
+   "rise": true,
+   "fadeOut": 0.3
+  },
+  {
+   "kind": "proof",
+   "start": 133.08,
+   "dur": 12.54,
+   "hook": "ふすまごしの原則チェックで止めました: 脳(Claude 側)に音声を送る記述があります。",
+   "warp": [
+    [
+     0,
+     0
+    ],
+    [
+     5.93,
+     7.0
+    ]
+   ]
+  },
+  {
+   "kind": "slide",
+   "start": 133.08,
+   "dur": 0.95,
+   "src": "drawn",
+   "mode": "open",
+   "at": 0.0,
+   "len": 0.7,
+   "layer": 2
+  },
+  {
+   "kind": "video",
+   "start": 145.64,
+   "dur": 2.62,
+   "src": "char/pi_p01.mp4",
+   "from": 94.43,
+   "grade": "none",
+   "z0": 1.0,
+   "z1": 1.03,
+   "notes": [
+    {
+     "t0": 0.05,
+     "text": "実機の Pi ・ 架空料金請求の電話(相手の声: 警視庁の再現ドラマ)",
+     "side": "left"
+    },
+    {
+     "t0": 0.2,
+     "text": "通話中: 光らない・話さない。でも、のぞく",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "video",
+   "start": 148.22,
+   "dur": 2.98,
+   "src": "char/pi_p01.mp4",
+   "from": 280.38,
+   "grade": "none",
+   "z0": 1.03,
+   "z1": 1.06,
+   "notes": [
+    {
+     "t0": 0.05,
+     "text": "実機の Pi ・ 架空料金請求の電話(相手の声: 警視庁の再現ドラマ)",
+     "side": "left"
+    },
+    {
+     "t0": 0.1,
+     "text": "電話のあと: 本人に聞く",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "video",
+   "start": 151.2,
+   "dur": 3.94,
+   "src": "char/pi_p01.mp4",
+   "from": 286.89,
+   "grade": "none",
+   "z0": 1.06,
+   "z1": 1.08,
+   "notes": [
+    {
+     "t0": 0.05,
+     "text": "実機の Pi ・ 架空料金請求の電話(相手の声: 警視庁の再現ドラマ)",
+     "side": "left"
+    }
+   ]
+  },
+  {
+   "kind": "rec",
+   "start": 155.14,
+   "dur": 1.4,
+   "src": "rec/letter_v4/screen.mp4",
+   "from": 141.39,
+   "rate": 1.0,
+   "z0": [
+    1.7,
+    1525,
+    900
+   ],
+   "z1": [
+    1.72,
+    1525,
+    905
+   ],
+   "badge": null,
+   "overlays": [
+    {
+     "kind": "tap",
+     "t0": 0.65,
+     "x": 1248,
+     "y": 939
+    }
+   ],
+   "layer": 0
+  },
+  {
+   "kind": "video",
+   "start": 156.54,
+   "dur": 1.5,
+   "src": "video/phone_ringing.mp4",
+   "from": 0.2,
+   "grade": "dusk",
+   "z0": 1.03,
+   "z1": 1.06
+  },
+  {
+   "kind": "video",
+   "start": 158.04,
+   "dur": 3.96,
+   "src": "video/phone_hands.mp4",
+   "from": 5.0,
+   "grade": "sepia(.2) saturate(1.05) brightness(1.35) contrast(1.05)",
+   "z0": 1.02,
+   "z1": 1.05
+  },
+  {
+   "kind": "photo",
+   "start": 162.0,
+   "dur": 3.63,
+   "src": "img/getty_hands_table.jpg",
+   "grade": "warm",
+   "z0": 1.08,
+   "z1": 1.14,
+   "notes": [
+    {
+     "t0": 0.3,
+     "text": "イメージ",
+     "side": "right"
+    }
+   ]
+  },
+  {
+   "kind": "photo",
+   "start": 165.53,
+   "dur": 1.55,
+   "src": "img/oldroom_light.jpg",
+   "grade": "dusk",
+   "z0": 1.04,
+   "z1": 1.08
+  },
+  {
+   "kind": "ghost",
+   "start": 166.58,
+   "dur": 1.3,
+   "t0": 0.0,
+   "t1": 1.3,
+   "text": "ええ、膝がね、最近ちょっと痛くて。",
+   "layer": 1
+  },
+  {
+   "kind": "end",
+   "start": 167.08,
+   "dur": 12.38,
+   "bg": "img/oldroom_light.jpg",
+   "closeAt": 0.2,
+   "closeLen": 1.2,
+   "tagAt": 7.35,
+   "titleAt": 10.38,
+   "repo": ""
+  }
+ ],
+ "audio": [
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 0.0,
+   "dur": 12.0,
+   "from": 0.0,
+   "volume": 0.22,
+   "fadeIn": 0.0,
+   "fadeOut": 2.5,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/g10.wav",
+   "start": 0.25,
+   "dur": 2.02,
+   "from": 0.0,
+   "volume": 1.35,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/a01.wav",
+   "start": 1.25,
+   "dur": 4.67,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/a02.wav",
+   "start": 6.07,
+   "dur": 5.52,
+   "volume": 1.0
+  },
+  {
+   "src": "music/mixkit_22_piano_reflections.mp3",
+   "start": 3.2,
+   "dur": 43.9,
+   "from": 0.0,
+   "volume": 0.13,
+   "fadeIn": 3.0,
+   "fadeOut": 1.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/ring.wav",
+   "start": 11.84,
+   "dur": 1.75,
+   "from": 0.0,
+   "volume": 0.42,
+   "fadeIn": 0.0,
+   "fadeOut": 0.2,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/n01.wav",
+   "start": 13.29,
+   "dur": 5.69,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/n02.wav",
+   "start": 19.1,
+   "dur": 5.9,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/g11.wav",
+   "start": 25.4,
+   "dur": 1.98,
+   "from": 0.0,
+   "volume": 0.95,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/a03.wav",
+   "start": 27.45,
+   "dur": 5.04,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/a04.wav",
+   "start": 32.67,
+   "dur": 4.53,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/fusuma_ton.wav",
+   "start": 37.3,
+   "dur": 0.6,
+   "from": 0.0,
+   "volume": 0.55,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/b01.wav",
+   "start": 38.4,
+   "dur": 3.7,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/b02.wav",
+   "start": 42.2,
+   "dur": 4.2,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/lamp_on.wav",
+   "start": 38.9,
+   "dur": 1.4,
+   "from": 0.0,
+   "volume": 0.25,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/ring.wav",
+   "start": 47.5,
+   "dur": 0.6,
+   "from": 0.0,
+   "volume": 0.4,
+   "fadeIn": 0.0,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/b04.wav",
+   "start": 48.15,
+   "dur": 3.8,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 48.1,
+   "dur": 3.85,
+   "from": 0.0,
+   "volume": 0.18,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/S05_v2.wav",
+   "start": 51.95,
+   "dur": 2.84,
+   "from": 24.33,
+   "volume": 1.4,
+   "fadeIn": 0.08,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 54.79,
+   "dur": 0.68,
+   "from": 0.0,
+   "volume": 0.18,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/S05_v2.wav",
+   "start": 55.47,
+   "dur": 2.62,
+   "from": 43.57,
+   "volume": 1.4,
+   "fadeIn": 0.08,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 58.09,
+   "dur": 0.18,
+   "from": 0.0,
+   "volume": 0.18,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/S05_v2.wav",
+   "start": 58.27,
+   "dur": 8.9,
+   "from": 51.54,
+   "volume": 1.4,
+   "fadeIn": 0.08,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 58.27,
+   "dur": 8.35,
+   "from": 0.0,
+   "volume": 0.3,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/S05_v2.wav",
+   "start": 67.17,
+   "dur": 2.47,
+   "from": 60.44,
+   "volume": 1.4,
+   "fadeIn": 0.08,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/b05.wav",
+   "start": 69.74,
+   "dur": 5.54,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 69.64,
+   "dur": 5.73,
+   "from": 0.0,
+   "volume": 0.18,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/S05_v2.wav",
+   "start": 75.37,
+   "dur": 1.94,
+   "from": 108.18,
+   "volume": 1.4,
+   "fadeIn": 0.08,
+   "fadeOut": 0.12,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 77.31,
+   "dur": 0.7,
+   "from": 0.0,
+   "volume": 0.18,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/katan.wav",
+   "start": 77.61,
+   "dur": 0.35,
+   "from": 0.0,
+   "volume": 0.35,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/fusuma_slide.wav",
+   "start": 78.96,
+   "dur": 1.2,
+   "from": 0.0,
+   "volume": 0.45,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "music/wood_rhythm.wav",
+   "start": 79.51,
+   "dur": 20.72,
+   "from": 0.0,
+   "volume": 0.11,
+   "fadeIn": 0.6,
+   "fadeOut": 0.3,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/c02.wav",
+   "start": 79.41,
+   "dur": 4.49,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/c03.wav",
+   "start": 84.0,
+   "dur": 3.97,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/c04.wav",
+   "start": 88.27,
+   "dur": 2.61,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/c05.wav",
+   "start": 90.96,
+   "dur": 4.79,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/c06.wav",
+   "start": 95.83,
+   "dur": 4.2,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/fusuma_ton.wav",
+   "start": 100.23,
+   "dur": 0.6,
+   "from": 0.0,
+   "volume": 0.5,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "music/mixkit_22_piano_reflections.mp3",
+   "start": 101.03,
+   "dur": 30.0,
+   "from": 40.0,
+   "volume": 0.08,
+   "fadeIn": 2.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/lamp_on.wav",
+   "start": 100.83,
+   "dur": 1.4,
+   "from": 0.0,
+   "volume": 0.3,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/speech_v3/20261106-144650_fusuma_s0.wav",
+   "start": 100.93,
+   "dur": 2.64,
+   "from": 0.0,
+   "volume": 0.84,
+   "fadeIn": 0.02,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/R02v2_a1.wav",
+   "start": 103.53,
+   "dur": 3.61,
+   "from": 1.97,
+   "volume": 1.0,
+   "fadeIn": 0.03,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/speech_v3/20261106-144741_fusuma_s2.wav",
+   "start": 107.1,
+   "dur": 2.77,
+   "from": 0.0,
+   "volume": 0.84,
+   "fadeIn": 0.02,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/R02v2_a3.wav",
+   "start": 109.83,
+   "dur": 1.99,
+   "from": 0.02,
+   "volume": 1.0,
+   "fadeIn": 0.03,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/d01.wav",
+   "start": 112.13,
+   "dur": 5.12,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/clock_tick.wav",
+   "start": 112.78,
+   "dur": 4.87,
+   "from": 0.0,
+   "volume": 0.16,
+   "fadeIn": 0.0,
+   "fadeOut": 0.8,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/mailbox_koton.wav",
+   "start": 119.05,
+   "dur": 0.6,
+   "from": 0.0,
+   "volume": 0.55,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "music/wood_rhythm.wav",
+   "start": 121.9,
+   "dur": 11.48,
+   "from": 8.0,
+   "volume": 0.09,
+   "fadeIn": 1.0,
+   "fadeOut": 0.4,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/d02.wav",
+   "start": 117.65,
+   "dur": 4.75,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/d03.wav",
+   "start": 122.48,
+   "dur": 4.53,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/d04.wav",
+   "start": 127.09,
+   "dur": 5.89,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/bell.wav",
+   "start": 131.49,
+   "dur": 2.2,
+   "from": 0.0,
+   "volume": 0.22,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/fusuma_slide.wav",
+   "start": 133.08,
+   "dur": 1.2,
+   "from": 0.0,
+   "volume": 0.4,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "music/wood_rhythm.wav",
+   "start": 133.38,
+   "dur": 11.94,
+   "from": 20.0,
+   "volume": 0.1,
+   "fadeIn": 0.4,
+   "fadeOut": 0.5,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/d05.wav",
+   "start": 133.53,
+   "dur": 5.61,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/d06.wav",
+   "start": 139.26,
+   "dur": 6.21,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/typing.wav",
+   "start": 139.56,
+   "dur": 2.6,
+   "from": 0.0,
+   "volume": 0.25,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/fusuma_slide.wav",
+   "start": 145.62,
+   "dur": 1.2,
+   "from": 0.0,
+   "volume": 0.3,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/P01.wav",
+   "start": 145.64,
+   "dur": 2.57,
+   "from": 88.6,
+   "volume": 1.3,
+   "fadeIn": 0.04,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/p01_say3.wav",
+   "start": 148.22,
+   "dur": 3.02,
+   "from": 6.88,
+   "volume": 0.95,
+   "fadeIn": 0.02,
+   "fadeOut": 0.08,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/P02_a3.wav",
+   "start": 151.2,
+   "dur": 3.92,
+   "from": 2.04,
+   "volume": 1.2,
+   "fadeIn": 0.02,
+   "fadeOut": 0.1,
+   "rate": 1.0
+  },
+  {
+   "src": "music/mixkit_22_piano_reflections.mp3",
+   "start": 155.14,
+   "dur": 19.89,
+   "from": 96.0,
+   "volume": 0.12,
+   "fadeIn": 1.0,
+   "fadeOut": 1.5,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/e01.wav",
+   "start": 155.44,
+   "dur": 4.06,
+   "volume": 1.0
+  },
+  {
+   "src": "sfx/stamp_kon.wav",
+   "start": 156.14,
+   "dur": 0.25,
+   "from": 0.0,
+   "volume": 0.25,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "audio/ring.wav",
+   "start": 156.59,
+   "dur": 1.4,
+   "from": 0.0,
+   "volume": 0.35,
+   "fadeIn": 0.0,
+   "fadeOut": 0.2,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/k01.wav",
+   "start": 159.6,
+   "dur": 5.83,
+   "volume": 1.5
+  },
+  {
+   "src": "narration/g01.wav",
+   "start": 165.58,
+   "dur": 0.95,
+   "volume": 1.2
+  },
+  {
+   "src": "sfx/fusuma_slide.wav",
+   "start": 167.28,
+   "dur": 1.2,
+   "from": 0.0,
+   "volume": 0.3,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "sfx/fusuma_ton.wav",
+   "start": 168.43,
+   "dur": 0.6,
+   "from": 0.0,
+   "volume": 0.35,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/g12.wav",
+   "start": 168.93,
+   "dur": 1.79,
+   "from": 0.0,
+   "volume": 1.35,
+   "fadeIn": 0.0,
+   "fadeOut": 0.0,
+   "rate": 1.0
+  },
+  {
+   "src": "narration/e02.wav",
+   "start": 171.12,
+   "dur": 2.56,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/e03.wav",
+   "start": 174.43,
+   "dur": 2.18,
+   "volume": 1.0
+  },
+  {
+   "src": "narration/e04.wav",
+   "start": 177.46,
+   "dur": 1.19,
+   "volume": 1.0
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.4,
+   "end": 2.17,
+   "text": "(ふすまの向こうから)あら、そうなの。ふふっ。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 1.37,
+   "end": 5.74,
+   "text": "子どものころ、ふすまごしに、祖母の声が聞こえていました。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 6.19,
+   "end": 11.41,
+   "text": "笑い声や、黙りこむ時間で、元気かどうか、なんとなく、わかったんです。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 13.41,
+   "end": 18.8,
+   "text": "祖母が、電話の勧誘で、高額な商品を買わされたことがありました。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 19.22,
+   "end": 24.82,
+   "text": "離れて暮らす私たちは、\n電話の向こうで何が起きていたのか、知りませんでした。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 25.5,
+   "end": 27.28,
+   "text": "元気よぉ。大丈夫だから。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 27.57,
+   "end": 32.31,
+   "text": "便りがないのは、元気な証拠。そう、思っていました。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 32.79,
+   "end": 37.02,
+   "text": "あの、ふすま一枚の距離を、取り戻したくて。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 38.52,
+   "end": 41.92,
+   "text": "ふすまごしは、台所に置く、小さな行灯です。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 42.32,
+   "end": 46.22,
+   "text": "電話の線にはつながず、部屋のマイクで、祖母の声だけを聞きます。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 48.27,
+   "end": 51.77,
+   "text": "祖母が黙っている時間は、相手が話している時間です。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 52.15,
+   "end": 55.04,
+   "text": "ええ、膝がね、最近ちょっと痛くて。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 55.77,
+   "end": 58.29,
+   "text": "今日中なら、半額なんですか。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 67.22,
+   "end": 69.89,
+   "text": "でも、息子に聞いてみないと…",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 69.86,
+   "end": 75.1,
+   "text": "沈黙が続き、声が小さくなり、断りの言葉が、消えていく。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 75.62,
+   "end": 77.51,
+   "text": "…じゃあ、お願いします。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 79.53,
+   "end": 83.72,
+   "text": "友だちとの電話なら、沈黙は長くても2 秒ほど。\nこの電話は、9 秒ちかく。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 84.12,
+   "end": 87.79,
+   "text": "Claude に届くのは、文字と数値だけ。音声は、0 バイト。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 88.39,
+   "end": 90.7,
+   "text": "聞き役の Haiku が、勧誘の段階を記録。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 91.08,
+   "end": 95.57,
+   "text": "もう一人の Sonnet は、結論を知らずに、\n本物の可能性を、出典つきで探す。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 95.95,
+   "end": 99.85,
+   "text": "まとめ役は、夕方の便りを選ぶ。お金は、まだ動いていないから。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 100.93,
+   "end": 103.45,
+   "text": "そういえば、さっきの電話、なんだったの？",
+   "who": "fusuma",
+   "size": 42
+  },
+  {
+   "start": 103.53,
+   "end": 107.02,
+   "text": "今日だけ半額だっていうから、つい、頼んじゃったのよ。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 107.1,
+   "end": 109.75,
+   "text": "この話、健太にも話しておいていい?",
+   "who": "fusuma",
+   "size": 42
+  },
+  {
+   "start": 109.83,
+   "end": 111.7,
+   "text": "いいわよ。心配性なんだから。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 112.25,
+   "end": 117.07,
+   "text": "「つい」。その一言の中に、2 分ほどの電話がありました。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 117.77,
+   "end": 122.22,
+   "text": "毎日、夕方 6 時に、祖母の家から、便りが届きます。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 122.6,
+   "end": 126.83,
+   "text": "警報ではなく、話しかけるきっかけと、\nクーリング・オフの期限を、出典つきで。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 127.21,
+   "end": 132.8,
+   "text": "書くのはManaged Agents。別の採点役が、\n言い切らない、責めない、400 字以内を確かめます。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 133.65,
+   "end": 138.96,
+   "text": "試験では、本物の警察や信用金庫への口出しも、\n危ない電話の見逃しも、ゼロでした。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 139.38,
+   "end": 145.29,
+   "text": "作ったのは、Claude Code と。原則を破るコードはフックが止め、\n6 つの観点のレビューで、80 件を直しました。",
+   "who": "narr",
+   "size": 38
+  },
+  {
+   "start": 145.64,
+   "end": 148.16,
+   "text": "えっ……4万円も、するんですか。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 148.22,
+   "end": 151.14,
+   "text": "行く前に、ケンタと一緒に、確かめてみない?",
+   "who": "fusuma",
+   "size": 42
+  },
+  {
+   "start": 151.2,
+   "end": 155.02,
+   "text": "じゃあ……やめておくわ。孫に、電話してみるね。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 155.56,
+   "end": 159.32,
+   "text": "同じ膝の話。こんどは、家族から。",
+   "who": "narr",
+   "size": 42
+  },
+  {
+   "start": 159.72,
+   "end": 165.25,
+   "text": "もしもし、ばあちゃん？膝の具合どう？\n今度、一緒に温泉行こうか。",
+   "who": "kenta",
+   "size": 42
+  },
+  {
+   "start": 165.7,
+   "end": 166.35,
+   "text": "行きたいわねえ。",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 169.03,
+   "end": 170.72,
+   "text": "(ふすまの向こうで)それがね、今日ね、",
+   "who": "grandma",
+   "size": 42
+  },
+  {
+   "start": 171.24,
+   "end": 173.5,
+   "text": "見張るのでも、のぞくのでもなく。",
+   "who": "narr",
+   "size": 42
+  }
+ ],
+ "marks": {
+  "s01": 11.79,
+  "s02": 25.15,
+  "s03": 37.300000000000004,
+  "s04": 47.500000000000014,
+  "s05": 78.8079278754018,
+  "s06": 88.11792787540179,
+  "s07": 100.4279278754018,
+  "s08": 111.7779278754018,
+  "s09": 117.3979278754018,
+  "s10": 133.0779278754018,
+  "s11": 145.61792787540182,
+  "s11b": 155.13792787540183,
+  "s12": 167.07792787540185,
+  "s13": 179.45792787540182
+ },
+ "lamp": [
+  {
+   "start": 100.93,
+   "dur": 2.52,
+   "wav": "audio/speech_v3/20261106-144650_fusuma_s0.wav",
+   "text": "そういえば、さっきの電話、なんだったの？"
+  },
+  {
+   "start": 107.1,
+   "dur": 2.65,
+   "wav": "audio/speech_v3/20261106-144741_fusuma_s2.wav",
+   "text": "この話、健太にも話しておいていい?"
+  }
+ ]
+}

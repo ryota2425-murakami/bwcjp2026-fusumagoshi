@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 946" width="1600" height="946">
+<title>相手の声を聞かなくても、会話の形は見える(友人との電話と、勧誘の電話)</title>
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800&amp;family=Klee+One:wght@400;600&amp;display=block');
+    .m{font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif}
+    .k{font-family:"Klee One","Hiragino Maru Gothic ProN","Yu Gothic",sans-serif}
+  </style>
+  <marker id="ah" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#24201c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="ahR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="13" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+    <path d="M2 1.5L10.5 6L2 10.5" fill="none" stroke="#c4432c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="1600" height="946" fill="#f3ead8"/>
+<!-- 帯: S11.truth.json・S05.truth.json の発話の時刻(lab/data/scenarios/。受話器を上げた時 = 0、1 秒 = 10 px)。
+     数字: 耳の出力 ear_S11.json・ear_S05.json(lab/runs/eval/、リポジトリでは eval/ear_cache/)。 -->
+<text class="m" x="50" y="66" font-size="36" font-weight="800" fill="#24201c" letter-spacing=".04em">相手の声を聞かなくても、会話の「形」は見える</text>
+<text class="m" x="50" y="104" font-size="20" font-weight="600" fill="#4a423a">耳が聞くのは祖母の声だけ。祖母が黙っているあいだを、相手が話している時間とみなす。</text>
+<rect x="50" y="140" width="30" height="16" rx="2" fill="#e99a3c"/>
+<text class="k" x="90" y="155" font-size="17" font-weight="600" fill="#4a423a">祖母の声(耳が聞く)</text>
+<circle cx="300" cy="148" r="2.6" fill="#2c4a6b"/>
+<circle cx="310" cy="148" r="2.6" fill="#2c4a6b"/>
+<circle cx="320" cy="148" r="2.6" fill="#2c4a6b"/>
+<circle cx="330" cy="148" r="2.6" fill="#2c4a6b"/>
+<text class="k" x="342" y="155" font-size="17" font-weight="600" fill="#4a423a">相手が話している時間(推定。耳は聞かない)・点ひとつ ≒ 1 秒</text>
+<rect x="856" y="140" width="40" height="16" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="866" cy="148" r="2.6" fill="#2c4a6b"/>
+<circle cx="876" cy="148" r="2.6" fill="#2c4a6b"/>
+<circle cx="886" cy="148" r="2.6" fill="#2c4a6b"/>
+<text class="k" x="906" y="155" font-size="17" font-weight="600" fill="#4a423a">5 秒以上の沈黙</text>
+<text class="m" x="50" y="234" font-size="23" font-weight="700" fill="#24201c">友人との世間話</text>
+<text class="k" x="50" y="260" font-size="16" font-weight="600" fill="#857a6e">本物・約 30 秒</text>
+<path d="M330 205V253M627.8 205V253" stroke="#857a6e" stroke-width="1.6"/>
+<circle cx="353.6" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="384.5" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="394.5" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="436.3" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="446.3" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="475.0" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="528.3" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="538.3" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="571.3" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="602.6" cy="229.0" r="2.6" fill="#2c4a6b"/>
+<rect x="338.9" y="212" width="9.7" height="34" rx="2" fill="#e99a3c"/>
+<rect x="360.6" y="212" width="18.9" height="34" rx="2" fill="#e99a3c"/>
+<rect x="399.5" y="212" width="31.8" height="34" rx="2" fill="#e99a3c"/>
+<rect x="456.3" y="212" width="13.7" height="34" rx="2" fill="#e99a3c"/>
+<rect x="488.0" y="212" width="35.3" height="34" rx="2" fill="#e99a3c"/>
+<rect x="545.3" y="212" width="21.0" height="34" rx="2" fill="#e99a3c"/>
+<rect x="581.3" y="212" width="16.3" height="34" rx="2" fill="#e99a3c"/>
+<rect x="607.6" y="212" width="10.2" height="34" rx="2" fill="#e99a3c"/>
+<text class="k" x="659.8" y="236" font-size="17" font-weight="600" fill="#2c4a6b">あいだは、どれも 2.3 秒以内。交互に話している</text>
+<text class="m" x="50" y="420" font-size="23" font-weight="700" fill="#24201c">健康食品の電話勧誘</text>
+<text class="k" x="50" y="446" font-size="16" font-weight="600" fill="#857a6e">2 回目・約 2 分</text>
+<path d="M330 391V439M1512.5 391V439" stroke="#857a6e" stroke-width="1.6"/>
+<circle cx="352.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="362.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="372.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="417.3" y="398" width="65.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="422.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="432.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="442.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="452.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="462.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="472.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="506.7" y="398" width="80.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="511.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="521.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="531.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="541.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="551.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="561.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="571.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="581.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="605.7" y="398" width="70.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="610.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="620.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="630.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="640.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="650.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="660.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="670.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="709.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="719.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="729.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="739.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="751.9" y="398" width="90.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="756.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="766.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="776.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="786.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="796.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="806.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="816.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="826.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="836.9" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="864.1" y="398" width="75.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="869.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="879.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="889.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="899.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="909.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="919.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="929.1" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="976.3" y="398" width="80.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="981.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="991.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1001.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1011.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1021.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1031.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1041.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1051.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="1083.4" y="398" width="60.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="1088.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1098.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1108.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1118.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1128.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1138.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="1171.5" y="398" width="55.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="1176.5" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1186.5" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1196.5" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1206.5" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1216.5" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="1251.3" y="398" width="70.0" height="34" fill="#2c4a6b" fill-opacity=".13"/>
+<circle cx="1256.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1266.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1276.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1286.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1296.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1306.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1316.3" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1340.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1350.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1360.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1400.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1410.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1420.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1430.4" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1460.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1470.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<circle cx="1480.7" cy="415.0" r="2.6" fill="#2c4a6b"/>
+<rect x="339.9" y="398" width="7.8" height="34" rx="2" fill="#e99a3c"/>
+<rect x="377.7" y="398" width="39.6" height="34" rx="2" fill="#e99a3c"/>
+<rect x="482.3" y="398" width="24.4" height="34" rx="2" fill="#e99a3c"/>
+<rect x="586.7" y="398" width="19.0" height="34" rx="2" fill="#e99a3c"/>
+<rect x="675.7" y="398" width="20.7" height="34" rx="2" fill="#e99a3c"/>
+<rect x="701.4" y="398" width="3.0" height="34" rx="2" fill="#e99a3c"/>
+<rect x="749.1" y="398" width="3.0" height="34" rx="2" fill="#e99a3c"/>
+<rect x="841.9" y="398" width="22.2" height="34" rx="2" fill="#e99a3c"/>
+<rect x="939.1" y="398" width="28.5" height="34" rx="2" fill="#e99a3c"/>
+<rect x="973.6" y="398" width="3.0" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1056.3" y="398" width="27.1" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1143.4" y="398" width="28.1" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1226.5" y="398" width="24.8" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1321.3" y="398" width="14.4" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1365.7" y="398" width="29.7" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1435.4" y="398" width="20.3" height="34" rx="2" fill="#e99a3c"/>
+<rect x="1485.7" y="398" width="14.8" height="34" rx="2" fill="#e99a3c"/>
+<text class="k" x="449.8" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">6.3秒</text>
+<text class="k" x="546.7" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">7.9秒</text>
+<text class="k" x="640.7" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">6.9秒</text>
+<text class="k" x="796.9" y="387" font-size="16" font-weight="600" fill="#c4432c" text-anchor="middle">8.9秒</text>
+<path d="M789.3 365.8 L794.4 365.1 L799.6 365.3 L804.5 366.2 L808.9 367.4 L813.0 368.7 L816.9 369.9 L820.5 371.4 L823.3 373.3 L825.2 375.4 L826.8 377.5 L828.6 379.6 L829.9 382.0 L830.0 384.5 L828.3 386.8 L825.4 388.8 L821.9 390.6 L818.3 392.2 L814.3 393.6 L809.8 394.6 L805.0 395.0 L800.2 395.0 L795.5 395.1 L790.7 395.3 L785.6 395.2 L780.7 394.5 L776.4 393.2 L772.8 391.5 L769.6 389.6 L766.8 387.6 L765.0 385.3 L764.7 382.9 L765.7 380.6 L767.2 378.4 L768.5 376.3 L769.8 374.1 L771.7 372.0 L774.8 370.2 L778.6 368.7 L782.7 367.5 L787.2 366.3 L792.0 365.3 L797.2 365.1 L802.4 365.7 L807.0 366.8 L811.1 368.1 L815.1 369.3 L818.9 370.7 L822.1 372.4 L824.4 374.4" fill="none" stroke="#c4432c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+<text class="k" x="796.9" y="334" font-size="17" font-weight="600" fill="#c4432c" text-anchor="middle">いちばん長い沈黙。</text>
+<text class="k" x="796.9" y="356" font-size="17" font-weight="600" fill="#c4432c" text-anchor="middle">黙って、聞いていた</text>
+<text class="k" x="901.6" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">7.4秒</text>
+<text class="k" x="1016.3" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">7.9秒</text>
+<text class="k" x="1113.4" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">5.9秒</text>
+<text class="k" x="1199" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">5.4秒</text>
+<text class="k" x="1286.3" y="387" font-size="16" font-weight="600" fill="#2c4a6b" text-anchor="middle">6.8秒</text>
+<path d="M841.9 438H864.1" stroke="#c4432c" stroke-width="2.4" stroke-linecap="round"/>
+<path d="M853.0 441V456" stroke="#857a6e" stroke-width="1.4"/>
+<text class="k" x="869" y="478" font-size="18" font-weight="600" fill="#24201c" text-anchor="end">「でも、息子に聞いてみないと。」</text>
+<text class="k" x="869" y="502" font-size="17" font-weight="600" fill="#c4432c" text-anchor="end">断りの語。このあと、もう出てこない</text>
+<path d="M1318.3 438q4 -4 8 0t8 0" fill="none" stroke="#c4432c" stroke-width="2.2" stroke-linecap="round"/>
+<path d="M1328.5 443V456" stroke="#857a6e" stroke-width="1.4"/>
+<text class="k" x="1344.5" y="478" font-size="18" font-weight="600" fill="#24201c" text-anchor="end">「じゃあお願いします。」</text>
+<text class="k" x="1344.5" y="502" font-size="17" font-weight="600" fill="#c4432c" text-anchor="end">いつもより −7 dB 小さな声で</text>
+<path d="M330 464V474M330 469H430.0M430.0 464V474" stroke="#857a6e" stroke-width="1.6"/>
+<text class="k" x="380" y="494" font-size="15" font-weight="600" fill="#857a6e" text-anchor="middle">10 秒</text>
+<text class="m" x="865" y="578" font-size="20" font-weight="700" fill="#4a423a" text-anchor="middle">友人との世間話</text>
+<text class="m" x="1315" y="578" font-size="20" font-weight="700" fill="#4a423a" text-anchor="middle">健康食品の電話勧誘(2 回目)</text>
+<path d="M50 596H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="m" x="70" y="633" font-size="21" font-weight="600" fill="#24201c">祖母の声</text>
+<text class="m" x="865" y="635" font-size="30" font-weight="800" fill="#24201c" text-anchor="middle">55%</text>
+<text class="m" x="1315" y="635" font-size="30" font-weight="800" fill="#c4432c" text-anchor="middle">28%</text>
+<path d="M50 650H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="m" x="70" y="687" font-size="21" font-weight="600" fill="#24201c">相手が話していた時間(推定)</text>
+<text class="m" x="865" y="689" font-size="30" font-weight="800" fill="#24201c" text-anchor="middle">45%</text>
+<text class="m" x="1315" y="689" font-size="30" font-weight="800" fill="#c4432c" text-anchor="middle">72%</text>
+<path d="M50 704H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="m" x="70" y="741" font-size="21" font-weight="600" fill="#24201c">いちばん長い沈黙</text>
+<text class="m" x="865" y="743" font-size="30" font-weight="800" fill="#24201c" text-anchor="middle">2.3 秒</text>
+<text class="m" x="1315" y="743" font-size="30" font-weight="800" fill="#c4432c" text-anchor="middle">8.9 秒</text>
+<path d="M50 758H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="m" x="70" y="795" font-size="21" font-weight="600" fill="#24201c">5 秒以上の沈黙</text>
+<text class="m" x="865" y="797" font-size="30" font-weight="800" fill="#24201c" text-anchor="middle">0 回</text>
+<text class="m" x="1315" y="797" font-size="30" font-weight="800" fill="#c4432c" text-anchor="middle">9 回</text>
+<path d="M50 812H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="m" x="70" y="849" font-size="21" font-weight="600" fill="#24201c">断りの語(前半 → 後半)</text>
+<text class="m" x="865" y="851" font-size="30" font-weight="800" fill="#24201c" text-anchor="middle">0 → 0</text>
+<text class="m" x="1315" y="851" font-size="30" font-weight="800" fill="#c4432c" text-anchor="middle">1 → 0</text>
+<path d="M50 866H1550" stroke="#2c4a6b" stroke-opacity=".28" stroke-width="1.2"/>
+<text class="k" x="50" y="900" font-size="15" font-weight="600" fill="#857a6e">0.6 秒未満の「はい」は、あいづちとして扱い、同意には数えない。帯の位置は台本の音声の発話時刻(受話器を上げた時を 0)。</text>
+<text class="k" x="50" y="924" font-size="15" font-weight="600" fill="#857a6e">数字は耳の出力(eval/ear_cache/ear_S11.json・ear_S05.json)。声は合成、通話は架空の台本。</text>
+</svg>

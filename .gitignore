@@ -1,0 +1,29 @@
+# 実行時に作られるもの(音声・記憶・台帳・モデル)はコミットしない
+/.venv/
+/.venv-tts/
+/vendor/
+/models/
+/data/
+/runs/
+/logs/
+app/managed/claude-lock.json
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+
+# 動画の素材・書き出し(ライセンス上、同梱しない)と、手元の設定
+video/project/public/
+video/project/out/
+video/assets/stock/
+video/assets/music/
+video/assets/rec/
+video/assets/getty/
+video/overview20/renders/
+
+# ツールの作業キャッシュ(手元のパスが入る)
+**/.hyperframes/
+**/.impeccable/hook.cache.json
+.env
+.env.*
+.claude/settings.local.json

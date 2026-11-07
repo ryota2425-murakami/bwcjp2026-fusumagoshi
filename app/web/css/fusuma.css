@@ -1,0 +1,262 @@
+/* ふすまごし ─ 台所の画面(通話明細)。1920x1080 の舞台を、窓の大きさに合わせて縮める */
+:root {
+  --ground: #f1f3f4;               /* 地(冷たい白) */
+  --ground-2: #e6e9eb;             /* 見出し行・区画の地 */
+  --ground-call: #dfe3e5;          /* 通話中(灯りが消えた地) */
+  --ink: #14181b;                  /* 墨 */
+  --ink-2: #434c51;                /* 二番目の文字 */
+  --ink-3: #636c71;                /* 注釈 */
+  --rule: #c7cdd0;                 /* 細い罫 */
+  --band: #1d4541;                 /* 帯(上下と区画の見出し) */
+  --band-ink: #eef2ef;
+  --band-ink-2: #a7bcb7;
+  --amber: #d4861a;                /* いま動いているもの(電話のあとだけ) */
+  --now: var(--amber);
+  --shu: #b3261e;                  /* 注記(最長の沈黙・断り・小さな声の約束) */
+  --other: #8aa0b3;                /* 相手が話している時間 */
+  --redact: #b9c0c2;               /* 消した言葉 */
+  --glow: .62;
+  --f-ui: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #0f1214; }
+body { font-family: var(--f-ui); color: var(--ink); -webkit-font-smoothing: antialiased; word-break: auto-phrase; font-weight: 400; }
+::selection { background: rgba(212, 134, 26, .28); color: var(--ink); }
+#stage { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 0 0; background: var(--ground); overflow: hidden; }
+.num, time, .t-num, .tbl td.t, .tbl td.v, .tbl td.gap { font-variant-numeric: tabular-nums; }
+b, strong, h1, h2 { font-weight: 600; }
+body.incall { --now: var(--ink); }
+
+/* ---------------- 上の帯 ---------------- */
+.bar { position: absolute; left: 0; top: 0; width: 1920px; height: 56px; background: var(--band); color: var(--band-ink);
+  display: grid; grid-template-columns: 408px 1fr auto; align-items: center; padding: 0 40px; }
+.brand { display: flex; align-items: baseline; gap: 12px; white-space: nowrap; }
+.brand b { font-size: 19px; letter-spacing: .06em; }
+.brand span { font-size: 13px; color: var(--band-ink-2); }
+.steps { list-style: none; display: flex; height: 56px; }
+.steps li { position: relative; display: flex; align-items: baseline; gap: 8px; padding: 0 24px; height: 56px; line-height: 56px; color: var(--band-ink-2); white-space: nowrap;
+  transition: color .4s; }
+.steps li + li::before { content: ""; position: absolute; left: 0; top: 19px; height: 18px; width: 1px; background: rgba(238, 242, 239, .22); }
+.steps li b { font-size: 15px; }
+.steps li span { font-size: 12px; }
+.steps li::after { content: ""; position: absolute; left: 24px; right: 24px; bottom: 0; height: 3px; background: var(--now); transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease); }
+.steps li.on { color: var(--band-ink); }
+.steps li.on::after { transform: scaleX(1); }
+body.incall .steps li.on::after { background: var(--band-ink); }
+.when { display: flex; align-items: baseline; gap: 16px; white-space: nowrap; }
+.when span { font-size: 14px; color: var(--band-ink-2); }
+.clock { font-size: 24px; font-weight: 600; letter-spacing: .02em; }
+
+/* ---------------- 本体 ---------------- */
+main { position: absolute; left: 0; top: 56px; width: 1920px; height: 976px; display: grid; grid-template-columns: 1128px 792px; }
+.ledger-col { position: relative; padding: 30px 40px 24px 40px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; min-height: 0; }
+#sheet { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+#sheet > .sec.detail { flex: 1; min-height: 0; grid-template-rows: minmax(0, 1fr); }
+#sheet > .sec.detail > .body { display: flex; flex-direction: column; min-height: 0; }
+#sheet > .sec.detail .rows { flex: 1; min-height: 0; height: auto; }
+.side-col { position: relative; padding: 30px 40px 0 32px; transition: background-color 1.2s; }
+body.incall .side-col { background-color: var(--ground-call); }
+
+/* 区画: 見出しは左の余白列に吊るす */
+.sec { display: grid; grid-template-columns: 112px 1fr; column-gap: 0; }
+.lab { font-size: 13px; font-weight: 600; color: var(--ink-2); padding-top: 2px; letter-spacing: .04em; }
+.lab h2 { font: inherit; }
+.lab-note { font-size: 11px; font-weight: 400; line-height: 1.55; color: var(--ink-3); letter-spacing: 0; margin-top: 10px; padding-right: 16px; }
+.lab-note p + p { margin-top: 8px; }
+.lab-note .sw { display: block; width: 26px; height: 8px; margin-bottom: 3px; }
+.lab-note .sw.o { background: repeating-linear-gradient(-45deg, var(--other) 0 2px, transparent 2px 5px); border: 1px solid var(--other); }
+.lab-note .sw.g { background: var(--ink); height: 6px; }
+.side-col .sec { grid-template-columns: 84px 1fr; }
+.sec + .sec { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--rule); }
+
+/* 通話の見出し */
+.title { display: flex; align-items: baseline; gap: 16px; }
+.title h1 { font-size: 26px; letter-spacing: .04em; line-height: 1.2; }
+.callid { font-size: 15px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.facts { display: grid; grid-template-columns: repeat(4, auto); justify-content: start; column-gap: 40px; row-gap: 2px; margin-top: 14px; }
+.facts div { display: flex; flex-direction: column; gap: 3px; }
+.facts dt { font-size: 12px; color: var(--ink-3); }
+.facts dd { font-size: 16px; font-weight: 600; white-space: nowrap; }
+.facts dd small { font-size: 12px; font-weight: 400; color: var(--ink-3); margin-left: 6px; }
+
+/* ---------------- 明細表 ---------------- */
+#sheet > .sec { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--rule); }
+.tbl { width: 936px; border-collapse: collapse; table-layout: fixed; }
+.tbl th { font-size: 12px; font-weight: 400; color: var(--ink-3); text-align: left; padding: 0 8px 7px; border-bottom: 1px solid var(--ink); white-space: nowrap; }
+.tbl th.r, .tbl td.r { text-align: right; }
+.tbl td { height: 31px; padding: 0 8px; border-bottom: 1px solid var(--rule); white-space: nowrap; overflow: hidden; vertical-align: middle; line-height: 20px; }
+.tbl td.t { font-size: 14px; color: var(--ink-2); }
+.tbl td.v { font-size: 14px; }
+.tbl td.w { font-size: 16px; text-overflow: ellipsis; }
+.tbl.closed tbody tr:last-child td { border-bottom: 3px double var(--ink); }   /* 通話が終わったら、明細を締める */
+.tbl td.w .hide { font-size: 12px; color: var(--ink-3); margin-left: 8px; }
+.tbl td.w .gone { display: inline-block; height: 10px; vertical-align: middle; background: var(--redact); border-radius: 1px; }
+.tbl td.nt { font-size: 13px; }
+.tbl tr.bc td { height: 26px; }
+.tbl tr.bc td.w { font-size: 14px; color: var(--ink-3); }
+.tbl tr.bc td.t, .tbl tr.bc td.v { color: var(--ink-3); font-size: 13px; }
+.tbl tr.new td { animation: rowIn .7s var(--ease); }
+@keyframes rowIn { from { background: rgba(212, 134, 26, .16); } to { background: transparent; } }
+body.incall .tbl tr.new td { animation-name: rowInDark; }
+@keyframes rowInDark { from { background: rgba(20, 24, 27, .07); } to { background: transparent; } }
+
+/* 間と声: 相手の時間(斜線)と祖母の声(墨)を、実測の長さで横に */
+.span { position: relative; display: flex; align-items: center; height: 16px; }
+.span .o { height: 11px; background: repeating-linear-gradient(-45deg, var(--other) 0 2px, transparent 2px 5px); border: 1px solid var(--other); border-right: none; }
+.span .o.long { background: repeating-linear-gradient(-45deg, #5e7890 0 2px, transparent 2px 4px); border-color: #5e7890; }
+.span .o.max { border: 1.5px solid var(--shu); background: repeating-linear-gradient(-45deg, rgba(179, 38, 30, .55) 0 2px, transparent 2px 4px); }
+.span .g { background: var(--ink); border-radius: 1px; }
+.tbl td.gap { font-size: 14px; }
+.tbl td.gap.long { font-weight: 600; }
+.tbl td.gap.max { color: var(--shu); font-weight: 600; }
+
+/* 注記 */
+.tag { display: inline-block; font-size: 12px; line-height: 18px; padding: 0 5px; border: 1px solid currentColor; border-radius: 2px; margin-right: 4px; white-space: nowrap; }
+.tag.shu { color: var(--shu); }
+.tag.mute { color: var(--ink-3); border-color: var(--rule); }
+.tag.ref { color: var(--band); }
+.nt .tx { color: var(--shu); font-size: 12px; }
+.nt .tx.mute { color: var(--ink-3); }
+
+/* 聞き役が読んだ段階(区切りの行) */
+.tbl tr.stg td { height: 27px; border-bottom: 1px solid var(--rule); background: var(--ground-2); font-size: 12px; color: var(--ink-2); }
+.tbl tr.stg td b { font-size: 13px; color: var(--ink); margin: 0 10px 0 8px; }
+.tbl tr.stg td .t-num { color: var(--ink-3); }
+.tbl tr.stg.cur td b::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--now); margin-right: 8px; vertical-align: 1px; }
+.tbl tr.more td { height: 24px; font-size: 12px; color: var(--ink-3); background: var(--ground-2); }
+
+.rows { position: relative; height: 498px; overflow: hidden; }
+.rows.ix { height: auto; }
+
+/* 照合した記録(まとめ役が見つけた、前の記録) */
+.refs { display: grid; gap: 4px; }
+.refs .ref { display: grid; grid-template-columns: 32px 200px 1fr; align-items: baseline; font-size: 14px; line-height: 1.55; }
+.refs .ref .n { color: var(--band); font-weight: 600; }
+.refs .ref .d { color: var(--ink-2); font-size: 12px; }
+.refs .ref .d .t-num { color: var(--ink); font-size: 13px; }
+
+/* 小計 */
+.sum { display: grid; grid-template-columns: 320px repeat(3, auto); justify-content: start; column-gap: 44px; align-items: end; }
+.sum .k { font-size: 12px; color: var(--ink-3); display: block; margin-bottom: 4px; }
+.sum .v { font-size: 24px; font-weight: 600; line-height: 1; font-variant-numeric: tabular-nums; }
+.sum .v small { font-size: 13px; font-weight: 400; margin-left: 3px; }
+.sum .v.shu { color: var(--shu); }
+.share .bar2 { display: flex; height: 12px; margin-top: 8px; border: 1px solid var(--ink); }
+.share .bar2 i { display: block; height: 100%; }
+.share .bar2 .s { background: var(--ink); }
+.share .bar2 .o { background: repeating-linear-gradient(-45deg, var(--other) 0 2px, transparent 2px 5px); }
+.share .lg { display: flex; justify-content: space-between; margin-top: 5px; font-size: 12px; color: var(--ink-2); }
+.share .lg b { font-size: 14px; color: var(--ink); margin-left: 6px; font-variant-numeric: tabular-nums; }
+
+/* 耳の処理 */
+.proc { font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+.proc b { color: var(--ink); }
+.proc .line { font-size: 12px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 936px; font-variant-numeric: tabular-nums; }
+
+/* いつもの日: これまでの記録 */
+.empty { font-size: 14px; line-height: 1.7; color: var(--ink-3); padding: 12px 0; }
+.ix-two { display: grid; grid-template-columns: 336px 1fr; column-gap: 48px; }
+.cal .m { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+.cal .m small { font-weight: 400; color: var(--ink-3); font-size: 12px; margin-left: 10px; }
+.cal .g { display: grid; grid-template-columns: repeat(7, 48px); }
+.cal .g span { height: 34px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--ink-2); position: relative; border-top: 1px solid var(--rule); font-variant-numeric: tabular-nums; }
+.cal .g span.h { font-size: 12px; color: var(--ink-3); border-top: none; height: 24px; }
+.cal .g span.sun { color: var(--ink); font-weight: 600; }
+.cal .m .mk { display: inline-block; width: 8px; height: 8px; margin: 0 5px 0 12px; vertical-align: 0; }
+.cal .m .mk.call { background: var(--band); }
+.cal .m .mk.memo { border: 1.5px solid var(--ink-2); }
+.cal .g span.today { color: var(--ink); font-weight: 600; }
+.cal .g span.today::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 5px; height: 2px; background: var(--ink); }
+.cal .g span.call::before, .cal .g span.memo::before { content: ""; position: absolute; top: 6px; right: 8px; width: 7px; height: 7px; }
+.cal .g span.call::before { background: var(--band); }
+.cal .g span.memo::before { border: 1.5px solid var(--ink-2); }
+
+/* ---------------- 右: 行灯(ディスプレイの中のみずち。Pi の画面と同じ絵と同じ合図) ---------------- */
+.andon-body { display: grid; grid-template-columns: 300px 1fr; column-gap: 28px; }
+.andon { display: flex; flex-direction: column; gap: 8px; }
+.device { width: 300px; padding: 8px; background: #1b1f22; border-radius: 12px; box-shadow: 0 12px 20px -14px rgba(15, 18, 20, .55); }
+.screen { position: relative; width: 284px; height: 160px; border-radius: 4px; overflow: hidden; background: #F4F1EA; }
+.screen .floor { position: absolute; left: 50%; width: 152px; height: 21px; top: 118px; transform: translateX(-50%);
+  background: radial-gradient(closest-side, rgba(43, 33, 28, .10), rgba(43, 33, 28, 0)); }
+#mizuchi { position: absolute; left: 50%; top: 50%; width: 200px; height: 141px; transform: translate(-50%, -60%); }
+#mizuchi svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.andon figcaption { display: flex; align-items: baseline; gap: 10px; font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.andon figcaption .mood { font-size: 14px; font-weight: 600; color: var(--ink); }
+.say { padding-top: 2px; }
+.speaker { font-size: 12px; color: var(--ink-3); height: 18px; white-space: nowrap; }
+body.speaking .speaker { color: var(--ink); font-weight: 600; }
+body.speaking .speaker::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--now); margin-right: 7px; vertical-align: 1px; }
+#andonCaption { font-size: 24px; line-height: 1.55; letter-spacing: .02em; margin-top: 4px; }
+#andonCaption.m { font-size: 21px; }
+#andonCaption.s { font-size: 18px; }
+#andonCaption small { display: block; font-size: 14px; line-height: 1.6; color: var(--ink-2); margin-top: 10px; letter-spacing: 0; }
+#andonCaption.quiet { color: var(--ink-2); }
+#andonCaption.m.quiet:not(.said) { font-size: 21px; font-weight: 600; color: var(--ink); }
+
+/* 台所の音 */
+#meter { width: 100%; height: 40px; display: block; }
+#meter .base { stroke: var(--rule); stroke-width: 1; fill: none; }
+#meterPath { fill: none; stroke: var(--ink-2); stroke-width: 3.2; }
+.meter-l { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
+
+/* 電話のあとのお話 */
+#dialog { min-height: 64px; }
+#dialog .note { font-size: 14px; line-height: 1.65; color: var(--ink-2); }
+#dialog .reply { display: grid; grid-template-columns: 100px 1fr; align-items: baseline; font-size: 14px; }
+#dialog .reply b { font-size: 13px; color: var(--ink-2); }
+#dialog .reply .said { font-size: 17px; }
+#dialog .reply .blank { color: var(--ink-3); border-bottom: 1px dashed var(--ink-3); padding-bottom: 2px; }
+#dialog .next { display: flex; gap: 0; margin-top: 12px; border: 1px solid var(--rule); }
+#dialog .next span { flex: 1; font-size: 12px; padding: 6px 12px; color: var(--ink-3); white-space: nowrap; }
+#dialog .next span + span { border-left: 1px solid var(--rule); }
+#dialog .next span .t-num { margin-right: 8px; }
+#dialog .next span.done { color: var(--ink-2); }
+#dialog .next span.cur { color: var(--ink); font-weight: 600; box-shadow: inset 0 -3px 0 var(--now); }
+
+/* ---------------- 判定: 3 つの役 ---------------- */
+.council-h { font-size: 12px; color: var(--ink-3); margin-bottom: 10px; }
+.council { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); }
+.role { position: relative; padding: 12px 16px 0 16px; height: 330px; }
+.role + .role { border-left: 1px solid var(--rule); }
+.role:first-child { padding-left: 0; }
+.role::before { content: ""; position: absolute; left: 0; right: 0; top: -1px; height: 3px; background: var(--now); transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease); }
+.role.active::before { transform: scaleX(1); }
+.role .who { display: flex; align-items: baseline; justify-content: space-between; }
+.role .who b { font-size: 15px; }
+.role .who span { font-size: 11px; color: var(--ink-3); }
+.role .how { font-size: 11px; color: var(--ink-3); line-height: 1.55; margin-top: 2px; min-height: 34px; }
+.role .main { font-size: 18px; font-weight: 600; line-height: 1.45; margin-top: 10px; line-break: strict; text-wrap: pretty; }
+.role .main.sm { font-size: 15px; }
+.role .wait { color: var(--ink-3); font-weight: 400; font-size: 15px; }
+.role .sub { font-size: 13px; line-height: 1.65; color: var(--ink-2); margin-top: 8px; overflow-wrap: anywhere; }
+.role .kv { display: grid; grid-template-columns: auto 1fr; column-gap: 12px; row-gap: 2px; margin-top: 10px; font-size: 12px; align-items: baseline; }
+.role .kv dt { color: var(--ink-3); }
+.role .kv dd { font-weight: 600; }
+.role .kv dd.num { font-size: 15px; font-variant-numeric: tabular-nums; }
+.role .cite { font-size: 12px; line-height: 1.55; color: var(--ink-2); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--rule); }
+.role .cite b { color: var(--band); }
+.role .choice { display: grid; margin-top: 10px; border: 1px solid var(--rule); }
+.role .choice span { font-size: 12px; line-height: 22px; padding: 0 10px; color: var(--ink-3); white-space: nowrap; }
+.role .choice span + span { border-top: 1px solid var(--rule); }
+.role .choice span.pick { background: var(--ink); color: var(--ground); font-weight: 600; }
+.thinking::after { content: "…"; display: inline-block; animation: dots 1.4s steps(4) infinite; width: 1.2em; overflow: hidden; vertical-align: bottom; }
+@keyframes dots { from { width: 0; } to { width: 1.2em; } }
+
+/* ---------------- 下の帯: 台帳 ---------------- */
+.foot { position: absolute; left: 0; top: 1032px; width: 1920px; height: 48px; background: var(--band); color: var(--band-ink-2);
+  display: flex; align-items: center; gap: 36px; padding: 0 40px; font-size: 13px; white-space: nowrap; }
+.foot .lab2 { color: var(--band-ink); font-weight: 600; font-size: 14px; }
+.foot .it { display: flex; align-items: baseline; gap: 8px; }
+.foot .it b { font-size: 18px; color: var(--band-ink); font-variant-numeric: tabular-nums; }
+.foot .note { margin-left: auto; color: var(--band-ink-2); }
+
+/* お知らせ */
+.toast { position: absolute; right: 40px; top: 72px; z-index: 20; background: var(--ground); border: 1px solid var(--ink); padding: 12px 20px; font-size: 15px; color: var(--ink);
+  box-shadow: 0 12px 28px -10px rgba(15, 18, 20, .45); transform: translateY(-12px); opacity: 0; transition: transform .5s var(--ease), opacity .4s; white-space: nowrap; pointer-events: none; }
+.toast.show { transform: none; opacity: 1; }
+.toast b::before { content: ""; display: inline-block; width: 8px; height: 8px; background: var(--now); margin-right: 10px; vertical-align: 1px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

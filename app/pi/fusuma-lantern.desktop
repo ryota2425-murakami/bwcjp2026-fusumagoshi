@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=ふすまの中の Claude
+Comment=Fusumagoshi lantern kiosk
+Exec=/bin/sh -c "$HOME/fusuma-lantern/start-kiosk.sh"
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "compositions/kitchen.html"
+        ],
+        "createdAt": "2026-11-07T17:40:44.176Z",
+        "reason": "Claude: plates start at opacity 0 and GSAP fades them in on the video timeline (1.0s, 9.6s, 13.0s); frames pulled from the rendered MP4 show each plate"
+      }
+    ]
+  }
+}
