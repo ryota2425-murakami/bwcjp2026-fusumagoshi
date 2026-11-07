@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- README の図「ふすまごしの一日」。画面(通話明細・家族の画面)とみずちの実際の絵から組む。
+     書き出し: Chrome --headless --screenshot で 1600×700 → docs/images/flow.png -->
+<html lang="ja"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=block" rel="stylesheet">
+<style>
+:root{--ground:#f1f3f4;--ground-2:#e6e9eb;--ink:#14181b;--ink-2:#434c51;--ink-3:#636c71;--rule:#c7cdd0;--band:#1d4541;--band-ink:#eef2ef;--amber:#d4861a;--shu:#b3261e;--other:#8aa0b3}
+*{box-sizing:border-box}
+html,body{margin:0;width:1600px;height:700px;background:var(--ground);font-family:"Hiragino Sans","Noto Sans JP",sans-serif;color:var(--ink)}
+header{height:72px;background:var(--band);color:var(--band-ink);display:flex;align-items:center;padding:0 40px;gap:20px}
+header h1{margin:0;font-size:30px;font-weight:900;letter-spacing:.06em}
+header span{font-size:16px;color:#a7bcb7}
+.row{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;padding:26px 36px}
+.p{background:#fff;border:1px solid var(--rule);border-radius:6px;height:574px;padding:22px 22px 18px;display:flex;flex-direction:column;position:relative}
+.p+.p::before{content:"";position:absolute;left:-17px;top:50%;width:12px;height:12px;border-top:3px solid var(--ink-3);border-right:3px solid var(--ink-3);transform:translateY(-50%) rotate(45deg)}
+.h{display:flex;align-items:baseline;gap:10px;margin-bottom:14px}
+.h b{font-size:15px;color:#fff;background:var(--band);width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.h h2{margin:0;font-size:23px;font-weight:900;white-space:nowrap}
+.h small{white-space:nowrap;font-size:15px;color:var(--amber);font-weight:700}
+.vis{flex:1;display:flex;flex-direction:column;gap:10px}
+.lead{font-size:17px;line-height:1.65;font-weight:500;margin:10px 0 8px}
+.tech{font-size:13px;color:var(--ink-3);border-top:1px solid var(--rule);padding-top:10px}
+.miz{height:150px;border-radius:10px;overflow:hidden;background-repeat:no-repeat;background-image:url(../../../docs/images/pi_moods.png);background-size:1171px 842px;border:6px solid #1b1d1f}
+.cap{font-size:15px;font-weight:700;color:var(--ink-2)}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th{white-space:nowrap;font-size:11px;color:var(--ink-3);font-weight:500;text-align:left;border-bottom:1px solid var(--ink);padding:3px 4px}
+td{border-bottom:1px solid var(--rule);padding:6px 4px;vertical-align:middle;white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+td.n.max{color:var(--shu);font-weight:700}
+.bar{display:inline-block;height:9px;vertical-align:middle;margin-right:2px}
+.bo{background:repeating-linear-gradient(135deg,var(--other) 0 2px,transparent 2px 4px)}
+.bg{background:var(--ink)}
+.tag{display:inline-block;border:1px solid var(--shu);color:var(--shu);font-size:10px;padding:0 3px;margin-left:2px;border-radius:2px}
+.said{font-size:21px;font-weight:700;line-height:1.5;margin:4px 0}
+.steps{display:flex;gap:6px;font-size:12px}
+.steps span{flex:1;border:1px solid var(--rule);padding:6px;border-radius:3px;color:var(--ink-3)}
+.steps span.cur{border-color:var(--amber);color:var(--ink);font-weight:700;box-shadow:inset 0 -3px 0 var(--amber)}
+.ref{border:1px solid var(--rule);border-radius:4px;padding:9px 10px;font-size:14px;line-height:1.55}
+.ref .k{font-size:12px;color:var(--ink-3)}
+.ref .k b{color:#2e6b5f;margin-right:6px}
+.ref.today{border-color:var(--shu)}
+.ref.today .k{color:var(--shu)}
+.phone{align-self:center;width:206px;height:300px;border-radius:26px;border:7px solid #1b1d1f;overflow:hidden;background:url(../../../docs/images/screen_letter.jpg) no-repeat;background-size:860px 484px;background-position:-576px -42px}
+.grade{font-size:13px;display:flex;gap:6px;align-items:center;justify-content:center}
+.grade .ng{color:var(--shu);font-weight:700}.grade .ok{color:#2e6b5f;font-weight:700}
+</style></head><body>
+<header><h1>ふすまごしの一日</h1><span>架空の通話 S05(健康食品の電話勧誘・2 回目)を実際に流したときの画面とキャラ</span></header>
+<div class="row">
+  <section class="p"><div class="h"><b>1</b><h2>黙って聞く</h2><small>通話中</small></div>
+    <div class="vis">
+      <div class="miz" style="background-position:-274px -84px;background-color:#1a1613"></div>
+      <div class="cap">行灯は暗く沈み、話さない</div>
+      <table><tr><th>時刻</th><th>相手 ／ 祖母</th><th>間 秒</th><th>祖母のことば</th></tr>
+        <tr><td>14:01:33</td><td><i class="bar bo" style="width:40px"></i><i class="bar bg" style="width:14px"></i></td><td class="n">6.9</td><td>今日中なら半額…</td></tr>
+        <tr><td>14:01:50</td><td><i class="bar bo" style="width:52px"></i><i class="bar bg" style="width:16px"></i></td><td class="n max">8.9</td><td>でも、息子に…<span class="tag">断り</span></td></tr>
+        <tr><td>14:02:38</td><td><i class="bar bo" style="width:40px"></i><i class="bar bg" style="width:12px"></i></td><td class="n">6.8</td><td>…じゃあ、お願い<span class="tag">約束</span></td></tr>
+      </table>
+    </div>
+    <p class="lead">聞くのは祖母の声と「間」だけ。相手の声は聞かず、音は Mac の外に出さない。</p>
+    <div class="tech">YAMNet ・ Silero VAD ・ whisper.cpp ・ Praat ・ 聞き役 Haiku 5.5</div>
+  </section>
+  <section class="p"><div class="h"><b>2</b><h2>電話のあとに一言</h2></div>
+    <div class="vis">
+      <div class="miz" style="background-position:-556px -84px"></div>
+      <div class="said">「そういえば、さっきの電話、なんだったの？」</div>
+      <div class="steps"><span class="cur">1 さっきの電話のこと</span><span>2 家族に話していい?</span><span>3 いつもの話へ</span></div>
+    </div>
+    <p class="lead">問い詰めず、一度にひとつ。家族に伝える前に、本人に聞く。</p>
+    <div class="tech">まとめ役 Sonnet 5.5 が判断 ・ 声は Mac の中で合成</div>
+  </section>
+  <section class="p"><div class="h"><b>3</b><h2>記憶でつなぐ</h2><small>照合</small></div>
+    <div class="vis">
+      <div class="ref"><div class="k"><b>※1</b>前の電話 10/30(9 日前)</div>同じ「はるかぜ健康」から、サプリメントの電話。断って、自分から切っていた。</div>
+      <div class="ref"><div class="k"><b>※2</b>おしゃべり 11/4(4 日前)</div>「それがね、最近、膝が痛くて。階段がつらいな。」</div>
+      <div class="ref today"><div class="k">今日の電話</div>膝のサプリ。今日だけ半額で、毎月届く約束。</div>
+    </div>
+    <p class="lead">同じ相手の 2 度目と、膝の悩みとのつながりに気づく。文字起こしは消し、短いカルテだけ残す。</p>
+    <div class="tech">通話カルテ ・ 暮らしのメモ ・ 記憶ストア</div>
+  </section>
+  <section class="p"><div class="h"><b>4</b><h2>家族に便り</h2><small>18:00</small></div>
+    <div class="vis">
+      <div class="phone"></div>
+      <div class="grade">採点 1 回目 <span class="ng">書き直し</span> → 2 回目 <span class="ok">合格</span></div>
+    </div>
+    <p class="lead">警報ではなく、電話をかけるきっかけと話し方を届ける。合格した便りだけ。</p>
+    <div class="tech">Managed Agents ・ Sonnet 5.5 ・ Outcomes</div>
+  </section>
+</div></body></html>

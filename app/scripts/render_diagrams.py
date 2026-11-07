@@ -15,7 +15,7 @@ from playwright.sync_api import sync_playwright
 APP = Path(__file__).resolve().parents[1]
 SRC = APP / "web" / "img"
 OUT = APP.parent / "docs" / "images" if (APP.parent / "docs").exists() else APP.parents[1] / "fusumagoshi" / "docs" / "images"
-NAMES = ["architecture", "eval", "flow", "ma"]       # README の図。hero は画面の写真(hero.jpg)に替えたので描かない
+NAMES = ["architecture", "eval", "ma"]       # README の図。flow は画面とキャラの実物から組む web/img/flow.html(Chrome で書き出す)
 FONT = ("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;600;700;800"
         "&family=Klee+One:wght@400;600&display=block")
 PAPER = "#f3ead8"     # 和紙の生成り(図の地と同じ色)
